@@ -12,74 +12,6 @@ For each button, you must specify an `Item`. To learn how to configure an `Item`
 
 ## Configuration
 
-Here are the configuration elements that are common to all types of buttons. You can use these elements universally across different button types.
-
-```yaml
-example: 
-  # Select the button type, NONE by default
-  type: <button type>
-  # Set the slot of the button, 0 by default
-  slot: <slot>
-  # Put slots for the button, empty by default
-  slots: <list of slot>
-  # Set the button page, 1 by default
-  page: <page>
-  # Define whether the button should appear on all pages
-  isPermanent: <true of false>
-  # Item that will be displayed, please look at the Items documentation
-  item: <itemstack>
-  # Played a sound when clicking
-  sound: <sound from XSound>
-  # Sound volume
-  volume: <volume of sound>
-  # Sound pitch
-  pitch: <pitch of sound>
-  # Messages sent during clicks
-  messages: <list of messages>
-  # Displays a link in the message list
-  openLink: 
-    link: <link>
-    message: <message>
-    replace: <replace placeholder>
-    hover: <list of messages>
-  # Close inventory on click
-  closeInventory: <true or false>
-  # Refresh item name and lore on click
-  refreshOnClick: <true or false>  
-  # Display player head, need a placeholder or a player name
-  playerHead: <placeholder>
-  # You can set one or more permissions to display the item
-  permission: <permission>  
-  # Show another button if not checked (placeholder check, permissions or other)
-  else: <else button>
-  # Placeholder
-  placeholder: <placeholder>
-  # Placeholder value
-  value: <value for placeholder>
-  # Placeholder Action
-  action: <action for placeholder>
-  # List of placeholders
-  placeholders: <list of placeholder>
-  # Update button on click (update everything)
-  update: <boolean>
-  # Command send by the players
-  commands: <list of text>
-  # Command send by the console on click
-  consoleCommands: <list of text>
-  # Command send by the console on right click
-  consoleRightCommands: <list of text>
-  # Command send by the console on left click
-  consoleLeftCommands: <list of text>
-  consolePermissionCommands: <list of text>
-  consolePermission: <permissions>
-  # Update item name and lore when the player click on the inventory
-  updateOnClick: <boolean>
-  # Sets the requirements the player should have to see the button. 
-  view_requirement: <requirement>
-  # Sets the requirements the player should have to click on the button. 
-  click_requirement: <requirement>
-```
-
 ### TYPE
 
 ```yaml
@@ -151,7 +83,7 @@ Allows you to specify the page where the button will be displayed. By default, t
 ### IsPermanent
 
 ```yaml
-isPermanent: <true of false>
+is-permanent: <true of false>
 ```
 
 Allows you to specify if the button should be displayed on all pages of the inventory. If your inventory has only one page, you don’t need to use this option.
@@ -161,7 +93,7 @@ Allows you to specify if the button should be displayed on all pages of the inve
 ### useCache
 
 ```yaml
-useCache: <true of false>
+use-cache: <true of false>
 ```
 
 Allows you to enable or disable caching on the item. By default, caching will always be used if the button item does not contain a placeholder.
@@ -240,7 +172,7 @@ openLink:
 ### CloseInventory
 
 ```yaml
-closeInventory: <true of false>
+close-inventory: <true of false>
 ```
 
 Allows you to close the inventory after clicking.
@@ -250,7 +182,7 @@ Allows you to close the inventory after clicking.
 ### RefreshOnClick
 
 ```yaml
-refreshOnClick: <true or false>
+refresh-on-click: <true or false>
 ```
 
 Allows the button to refresh after a click. You can use this feature to create a shop, for example. An example is provided in the default configuration.
@@ -260,7 +192,7 @@ Allows the button to refresh after a click. You can use this feature to create a
 ### PlayerHead
 
 ```yaml
-playerHead: <placeholder>
+player-head: <placeholder>
 ```
 
 Allows you to display a player's head based on a placeholder. You can use the placeholder `%player%` to display the head of the player who opens the inventory.
@@ -292,7 +224,7 @@ permission:
 Allows you to define a list of permissions, where the player only needs to have one of them.
 
 ```yaml
-orPermission:
+or-permission:
   - "first.permission"
   - "!second.permission"
 ```
@@ -324,7 +256,7 @@ items:
 ### Placeholder
 
 ```yaml
-  placeHolder: <placeholder>
+  placeholder: <placeholder>
   value: <value for placeholder>
   action: <action for placeholder>
 ```
@@ -371,7 +303,7 @@ Enables the automatic update of the item's name and lore. To configure the updat
 ### UpdateMasterButton
 
 ```yaml
-updateMasterButton: <true or false>
+update-master-button: <true or false>
 ```
 
 Allows you to completely update the button. You need to enable the update option for this feature to be activated. Instead of just updating the name and lore, this option refreshes the entire button. This includes rechecking permissions, requirements, and the `else` button.
@@ -381,7 +313,7 @@ Allows you to completely update the button. You need to enable the update option
 ### UpdateOnClick
 
 ```yaml
-updateOnClick: <true of false>
+update-on-click: <true of false>
 ```
 
 Allows your button to be updated whenever a player clicks anywhere in the inventory, regardless of the slot.
@@ -402,15 +334,15 @@ Allows the player to execute a list of commands. You can use the placeholder `%p
 ### Console Commands
 
 ```yaml
-consoleCommands: # Commands to be executed by the console no matter the click
+console-commands: # Commands to be executed by the console no matter the click
   - "<your command>"
-consoleRightCommands: # Commands to be executed by the console when right-click
+console-right-commands: # Commands to be executed by the console when right-click
   - "<your command>"
-consoleLeftCommands: # Commands to be executed by the console when left-click
+console-left-commands: # Commands to be executed by the console when left-click
   - "<your command>"
-consolePermissionCommands: # Commands to be executed by the console if the player has permission
+console-permission-commands: # Commands to be executed by the console if the player has permission
   - "<your command>"
-consolePermission: "<permission>
+console-permission: "<permission>
 ```
 
 You can execute commands from the console based on the player's click, as well as commands that require specific player permissions. You can use the placeholder `%player%` to retrieve the username of the player executing the commands.
@@ -420,7 +352,7 @@ You can execute commands from the console based on the player's click, as well a
 ### View Requirement
 
 ```yaml
-view_requirement:
+view-requirement:
   requirements: # In this example the player must have a balance greater than or equal to 5000
     - type: placeholder
       placeholder: "%vault_eco_balance%"
@@ -470,8 +402,8 @@ items:
       item: # Item to display
         material: BARRIER
         name: "&cError"
-    click_requirement:
-      left_click:
+    click-requirement:
+      left-click:
         clicks:
           - ALL
         requirements:
@@ -496,7 +428,7 @@ The `INVENTORY` type allows the player to open a new inventory.
 ```yaml
 inventory: <inventory file name>
 plugin: <plugin name>
-toPage: <page>
+to-page: <page>
 arguments:
   - <argument 1>
   - <argument 2>
@@ -526,7 +458,7 @@ Example:
 ```yaml
 next:
   type: NEXT
-  isPermanent: true
+  is-permanent: true
   slot: 50
   item:
     material: ARROW
@@ -543,7 +475,7 @@ The `PREVIOUS` type allows you to go to the previous page, if it exists. You can
 ```yaml
 previous:
   type: PREVIOUS
-  isPermanent: true
+  is-permanent: true
   slot: 48
   item:
     material: ARROW
@@ -562,7 +494,7 @@ The `MAINMENU` type allows you to return to the main inventory specified in the 
 The `JUMP` type allows you to change to a predefined page.
 
 ```yaml
-jumpButton:
+jump-button:
   type: JUMP
   toPage: 5
 ```
@@ -616,14 +548,14 @@ items:
         - "&8&m-----------------------"
   next:
     type: NEXT
-    isPermanent: true
+    is-permanent: true
     slot: 50
     item:
       material: ARROW
       name: "&fNext"
   previous:
     type: PREVIOUS
-    isPermanent: true
+    is-permanent: true
     slot: 48
     item:
       material: ARROW
@@ -672,7 +604,7 @@ items:
 
   next:
     type: NEXT
-    isPermanent: true
+    is-permanent: true
     slot: 50
     item:
       material: ARROW
@@ -680,7 +612,7 @@ items:
 
   previous:
     type: PREVIOUS
-    isPermanent: true
+    is-permanent: true
     slot: 48
     item:
       material: ARROW
@@ -710,7 +642,7 @@ You can add conditions based on the input type:
 name: "&8Input Inventory"
 size: 27
 items:
-  chooseAmount:
+  choose-amount:
     slot: 13
     type: INPUT
     item:
@@ -730,12 +662,12 @@ items:
       max: 100
       # regex: "^[a-zA-Z0-9]+$"
     # Action performed in case of successful conditions
-    success_actions:
+    success-actions:
       - type: console_command
         commands:
           - "bc %player% has just chosen the number %input% !" # or placeholder: %zmenu_input%
     # Action performed in case conditions failed
-    error_actions:
+    error-actions:
       - type: message
         messages:
           - "&cYou must choose a number between 0 and 100."

@@ -11,13 +11,13 @@ description: >-
 ### Syntax
 
 ```yaml
-# open_requirement
-# click_requirement
-view_requirement:
+# open-requirement
+# click-requirement
+view-requirement:
 
   # Set the minimum number of requirements to be able to say this is a success.
   # By default the value will be the same as the number of requirements.
-  minimumRequirement: <number>
+  minimum-requirement: <number>
   
   # List of requirements, all information about each type below
   requirements:
@@ -65,7 +65,7 @@ Defines the requirements a player must meet to see a button in the inventory.
 #### Example:
 
 ```yaml
-view_requirement:
+view-requirement:
   deny:
     - type: chat
       messages:
@@ -89,7 +89,7 @@ Defines the requirements a player must meet to open the inventory.
 #### Example
 
 ```yaml
-open_requirement:
+open-requirement:
   requirements:
     - type: regex
       input: "%player_item_in_hand%"
@@ -118,8 +118,8 @@ You can set the click type to `ALL` or `ANY` to apply the actions to all clicks.
 #### Example:
 
 ```yaml
-click_requirement:
-  left_click: # You must put a name for your requirement, it will not be used.
+click-requirement:
+  left-click: # You must put a name for your requirement, it will not be used.
     clicks:
       - LEFT
       - SHIFT_LEFT
@@ -137,7 +137,7 @@ click_requirement:
       - type: message
         messages:
           - "&aLeft click !"
-  right_click: # You must put a name for your requirement, it will not be used.
+  right-click: # You must put a name for your requirement, it will not be used.
     clicks:
       - RIGHT
       - SHIFT_RIGHT
@@ -178,7 +178,7 @@ click_requirement:
 </code></pre></td><td>Allows to check if the player has the job. Works with <a href="https://www.spigotmc.org/resources/jobs-reborn.4216/">JobReborn</a> plugin.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: luckperm
   group: &#x3C;group name>
 </code></pre></td><td>Allows to check if the player is in a group. Works with <a href="https://www.spigotmc.org/resources/luckperms.28140/">LuckPerms</a> plugin.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: playername
-  playerName: &#x3C;placeholder>
+  player-name: &#x3C;placeholder>
 </code></pre></td><td>Allows to check if a placeholder returns a text that can be a player nickname.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: money
   amount: &#x3C;amount>
   currency: &#x3C;currency name>

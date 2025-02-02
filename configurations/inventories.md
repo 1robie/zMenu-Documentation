@@ -27,16 +27,6 @@ In the default configuration, you have the following structure:
 
 ## Syntax
 
-```yaml
-name: "<inventory name>"
-size: <inventory size>
-fillItem: <itemstack>
-updateInterval: <update interval>
-clearInventory: <true/false>
-items: <buttons>
-open_requirement: <requirement>
-```
-
 ***
 
 ### Name
@@ -82,7 +72,7 @@ Allows to modify the [inventory type](https://hub.spigotmc.org/javadocs/bukkit/o
 ### Fill Item
 
 ```yaml
-fillItem: <itemstack>
+fill-item: <itemstack>
 ```
 
 This option allows you to fill all empty inventory slots with a specific item stack. This is useful for creating a consistent visual layout or preventing empty slots from being displayed. Refer to the [item information](items.md) for more details on how to define item stacks.
@@ -92,7 +82,7 @@ This option allows you to fill all empty inventory slots with a specific item st
 ### Update Interval
 
 ```yaml
-updateInterval: <update interval>
+update-interval: <update interval>
 ```
 
 Specifies how often the buttons in the inventory should be refreshed, in milliseconds. This is useful for dynamic inventories that need to update their content regularly, such as displaying live player stats. Note that for buttons to be updated, they must have the update option enabled. More details can be found [here](buttons/#update).
@@ -102,7 +92,7 @@ Specifies how often the buttons in the inventory should be refreshed, in millise
 ### Clear Inventory
 
 ```yaml
-clearInventory: <true/false>
+clear-inventory: <true/false>
 ```
 
 When set to true, this option clears the player's inventory upon opening the custom inventory and restores it when closing. This is particularly useful for displaying an unobstructed view or image within the inventory without any interference from the player's items.
@@ -151,7 +141,7 @@ Opens the inventory through interaction with an item. You must define the item's
 # Open this menu by clicking a specific item
 # You can use /zm giveopenitem <inventory> <player> to retrieve the item to use
 #
-openWithItem:
+open-with-item:
   # Define the item that will be clicked
   item:
     material: compass
@@ -194,7 +184,7 @@ name: "&7Basics Inventory"
 # Translate the inventory name into multiple languages
 # You must define the language and the country used
 # The vanilla Minecraft client will use lowercase language / country pairs separated by an underscore, but custom resource packs may use any format they wish.
-translatedName:
+translated-name:
   - locale: "fr_fr" # Allows to define the language in French
     name: "&aInventaire Basique"
   - locale: "es_es" # Allows to define the language in Spanish
@@ -228,7 +218,7 @@ patterns:  # List of pattern identifiers used in the menu
   - "zauctionhouse_auction"  # Pattern related to auction items or functionalities
 
 items:
-  displayItems:
+  display-items:
     type: ZAUCTIONHOUSE_AUCTION  # Type of items to display, specific to auction house items
     isPermanent: true  # Indicates these items will always be displayed and not dynamically updated
     slots:  # Specifies the slots in the menu for the items

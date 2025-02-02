@@ -9,7 +9,7 @@ With a requirement, you can define actions for both success and failure. Here ar
 **Example:** You will need to create an action list like this:
 
 ```yaml
-success_actions:
+success:
   - type: player_command
     commands:
       - "firstcommand"
@@ -27,7 +27,7 @@ success_actions:
 You can add a delay, in ticks, for each item in the list below. Do it like this:
 
 ```yaml
-success_actions:
+success:
   - type: player_command
     delay: 10 # 10 ticks
     commands:
@@ -39,7 +39,7 @@ success_actions:
   commands:
     - "firstcommand"
     - "seconds commands %player%"
-  commandInChat: false # false by default
+  command-in-chat: false # false by default
 </code></pre></td><td>Executes commands as the player. You can also send the command in the player's chat.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: console_command
   commands:
     - "firstcommand"
@@ -48,12 +48,12 @@ success_actions:
   messages:
     - "my message"
     - "my second messages"
-  minimessage: true # true by default
+  mini-message: true # true by default
 </code></pre></td><td>Sends a message to the player. You can use placeholders, color codes, and format codes. The MiniMessage format is enabled by default if your server supports it.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: broadcast
   messages:
     - "my message"
     - "my second message to %player%"
-  minimessage: true # true by default
+  mini-message: true # true by default
 </code></pre></td><td>Sends a message to all online players. You can use placeholders, color codes, and format codes. The MiniMessage format is enabled by default if your server supports it.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: chat
   messages:
     - "my message"

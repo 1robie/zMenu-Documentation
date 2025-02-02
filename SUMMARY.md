@@ -15,6 +15,7 @@
   * [🏁 Requirements](configurations/buttons/requirements.md)
   * [☢️ Actions](configurations/buttons/actions.md)
 * [🪁 Items](configurations/items.md)
+* [Global Placeholders](configurations/global-placeholders.md)
 * [🔋 Patterns](configurations/patterns.md)
 * [Commands](configurations/commands.md)
 * [🛝 Player data](configurations/player-data.md)
