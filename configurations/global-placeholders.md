@@ -1,3 +1,7 @@
+---
+icon: earth-europe
+---
+
 # Global Placeholders
 
 In the `global-placeholders.yml` file, you can define values that will be available across all inventory configuration files.\
