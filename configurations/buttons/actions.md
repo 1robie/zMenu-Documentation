@@ -40,11 +40,22 @@ success:
     - "firstcommand"
     - "seconds commands %player%"
   command-in-chat: false # false by default
-</code></pre></td><td>Executes commands as the player. You can also send the command in the player's chat.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: console_command
+</code></pre></td><td>Executes commands as the player. You can also send the command in the player's chat.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: random_player_command
+  amount: 1 # Default value
   commands:
     - "firstcommand"
     - "seconds commands %player%"
-</code></pre></td><td>Executes commands as the console.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: message
+  command-in-chat: false # false by default
+</code></pre></td><td>Executes random commands as the player. You can also send the command in the player's chat. <strong>Only available with</strong> <a href="https://www.spigotmc.org/resources/zmenu-premium-zmenu-addon.115533/"><strong>zMenu+</strong></a> <strong>! (</strong><a href="https://minecraft-inventory-builder.com/account-upgrade"><strong>premium account upgrade</strong></a><strong>)</strong></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: console_command
+  commands:
+    - "firstcommand"
+    - "seconds commands %player%"
+</code></pre></td><td>Executes commands as the console.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: random_console_command
+  amount: 1 # Default value
+  commands:
+    - "firstcommand"
+    - "seconds commands %player%"
+</code></pre></td><td>Execute random commands from the list. <strong>Only available with</strong> <a href="https://www.spigotmc.org/resources/zmenu-premium-zmenu-addon.115533/"><strong>zMenu+</strong></a> <strong>! (</strong><a href="https://minecraft-inventory-builder.com/account-upgrade"><strong>premium account upgrade</strong></a><strong>)</strong></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: message
   messages:
     - "my message"
     - "my second messages"
