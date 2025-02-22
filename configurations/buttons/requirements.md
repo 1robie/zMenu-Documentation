@@ -166,7 +166,7 @@ click-requirement:
   value: &#x3C;placeholder value>
   action: &#x3C;placeholder action>
   target: &#x3C;player / placeholder with player name>
-</code></pre></td><td><p>Allows you to define a permission using a placeholder. You must specify the placeholder, the action to be performed with the value, and the value that will be checked. For more information, click here.</p><p>You can specify a player; otherwise, the player who opens the inventory will be used by default.</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: regex
+</code></pre></td><td><p>Allows you to define a permission using a placeholder. You must specify the placeholder, the action to be performed with the value, and the value that will be checked. For more information, <a href="https://docs.zmenu.dev/configurations/buttons#placeholder">click here</a>.</p><p>You can specify a player; otherwise, the player who opens the inventory will be used by default.</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: regex
   regex: &#x3C;regex>
   input: &#x3C;placeholder>
 </code></pre></td><td><p>Checks if the input matches the specified regex pattern. The input can be a placeholder.</p><p>Visit <a href="https://regexr.com">regexr.com</a> to create your regex pattern.</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: item
