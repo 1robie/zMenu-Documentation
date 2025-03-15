@@ -120,5 +120,12 @@ success:
   duration: &#x3C;duration in milliseconds>
   end: &#x3C;end in milliseconds>
   
-</code></pre></td><td>Send a title</td></tr></tbody></table>
+</code></pre></td><td>Send a title</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">  - type: teleport
+    world: &#x3C;world> # default world is "world"
+    x: &#x3C;x>
+    y: &#x3C;y>
+    z: &#x3C;z>
+    yaw: &#x3C;yaw>
+    pitch: &#x3C;pitch>
+</code></pre></td><td>Teleport a player</td></tr></tbody></table>
 
