@@ -3,6 +3,7 @@
 * [🍾 Getting started](README.md)
 * [🔌 Installing zMenu](installing-zmenu.md)
 * [➕ Supported Plugins](supported-plugins.md)
+* [👍 zMenu+](zmenu+.md)
 
 ## ⛰️ Configurations
 

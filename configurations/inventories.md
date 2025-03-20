@@ -266,6 +266,10 @@ conditional-name:
         permission: zmenu.mod  # The player must have this permission
 ```
 
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+
 #### `name`
 
 The alternative inventory name displayed when the conditions are met.
