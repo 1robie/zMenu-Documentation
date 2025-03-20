@@ -32,7 +32,7 @@ In the default configuration, you have the following structure:
 ### `name`
 
 ```yaml
-name: "<inventory name>"
+name: "&8Example #ff6677Hex Color"
 ```
 
 The name of the inventory that will be displayed in-game. You can use colors (`&<code>`) to format the text and placeholders (`%placeholder%`) to dynamically insert values, such as player names or other variables. Keep in mind that some server versions may impose a character limit on inventory titles.
@@ -47,7 +47,7 @@ If your inventory has multiple pages, use these placeholders:
 ### `size`
 
 ```yaml
-size: <inventory size>
+size: 54
 ```
 
 Defines the number of slots in the inventory. The size must be a multiple of 9, as Minecraft inventories are organized in rows of 9 slots. The inventory size can range from **9** to **54**, which translates to 1 to 6 rows. The valid options are:
@@ -72,7 +72,8 @@ Allows to modify the [inventory type](https://hub.spigotmc.org/javadocs/bukkit/o
 ### `fill-item`
 
 ```yaml
-fill-item: <itemstack>
+fill-item:
+  material: BLACK_STAINED_GLASS_PANE
 ```
 
 This option allows you to fill all empty inventory slots with a specific item stack. This is useful for creating a consistent visual layout or preventing empty slots from being displayed. Refer to the [item information](items.md) for more details on how to define item stacks.
@@ -82,7 +83,7 @@ This option allows you to fill all empty inventory slots with a specific item st
 ### `update-interval`
 
 ```yaml
-update-interval: <update interval>
+update-interval: 1000 # 1000ms = 1s
 ```
 
 Specifies how often the buttons in the inventory should be refreshed, in milliseconds. This is useful for dynamic inventories that need to update their content regularly, such as displaying live player stats. Note that for buttons to be updated, they must have the update option enabled. More details can be found [here](buttons/#update).
@@ -92,7 +93,7 @@ Specifies how often the buttons in the inventory should be refreshed, in millise
 ### `clear-inventory`
 
 ```yaml
-clear-inventory: <true/false>
+clear-inventory: true
 ```
 
 When set to true, this option clears the player's inventory upon opening the custom inventory and restores it when closing. This is particularly useful for displaying an unobstructed view or image within the inventory without any interference from the player's items.
@@ -166,7 +167,7 @@ open-with-item:
 
 ### `open-requirement`
 
-For more information, refer to the [here](buttons/requirements.md#open-requirement).
+For more information, refer to [here](buttons/requirements.md#open-requirement).
 
 ***
 
@@ -209,7 +210,7 @@ patterns:
 
 You must place the name of your file in the `patterns` folder. You can add as many patterns as you want.
 
-Example from zAuctionHouseV3:
+Example from **zAuctionHouseV3**:
 
 ```yaml
 name: '&8ᴀᴜᴄᴛɪᴏɴ &8(&f%page%&8/&f%maxPage%&8)'  # Title of the menu, supports color codes and placeholders
