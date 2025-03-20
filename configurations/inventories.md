@@ -4,7 +4,7 @@ description: All information on inventories.
 
 # 👨‍💻 Inventories
 
-## Informations
+Informations
 
 ## Overview
 
@@ -281,3 +281,5 @@ Determines which name is selected if multiple conditions are met. **Higher** val
 #### `requirements`
 
 [Requirements](buttons/requirements.md) that must be met for a specific name to be applied
+
+<figure><img src="../.gitbook/assets/conditional-name.gif" alt=""><figcaption></figcaption></figure>
