@@ -29,7 +29,7 @@ In the default configuration, you have the following structure:
 
 ***
 
-### Name
+### `name`
 
 ```yaml
 name: "<inventory name>"
@@ -44,7 +44,7 @@ If your inventory has multiple pages, use these placeholders:
 
 ***
 
-### Size
+### `size`
 
 ```yaml
 size: <inventory size>
@@ -59,7 +59,7 @@ Defines the number of slots in the inventory. The size must be a multiple of 9, 
 * 45 (5 rows)
 * 54 (6 rows)
 
-### Type
+### `type`
 
 ```yaml
 type: CHEST
@@ -69,7 +69,7 @@ Allows to modify the [inventory type](https://hub.spigotmc.org/javadocs/bukkit/o
 
 ***
 
-### Fill Item
+### `fill-item`
 
 ```yaml
 fill-item: <itemstack>
@@ -79,7 +79,7 @@ This option allows you to fill all empty inventory slots with a specific item st
 
 ***
 
-### Update Interval
+### `update-interval`
 
 ```yaml
 update-interval: <update interval>
@@ -89,7 +89,7 @@ Specifies how often the buttons in the inventory should be refreshed, in millise
 
 ***
 
-### Clear Inventory
+### `clear-inventory`
 
 ```yaml
 clear-inventory: <true/false>
@@ -99,7 +99,7 @@ When set to true, this option clears the player's inventory upon opening the cus
 
 ***
 
-### Matrix
+### `matrix`
 
 The matrix configuration helps organize items visually in an inventory by representing slot arrangements using characters. Each character in the matrix corresponds to an item defined in the items section, making it easier to create complex layouts.
 
@@ -123,7 +123,7 @@ items:
 
 ***
 
-### Items
+### `items`
 
 ```yaml
 items: <buttons>
@@ -133,7 +133,7 @@ Defines the buttons or items that will be placed in the inventory. Each button c
 
 ***
 
-### OpenWithItem
+### `open-with-item`
 
 Opens the inventory through interaction with an item. You must define the item's details, the actions to be performed (full list [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/block/Action.html)), and the type of verification required.
 
@@ -164,11 +164,13 @@ open-with-item:
 
 ***
 
-### Open Requirement
+### `open-requirement`
 
 For more information, refer to the [here](buttons/requirements.md#open-requirement).
 
-## Translated Name
+***
+
+### `translated-name`
 
 Allows you to translate the inventory name into multiple languages.
 
@@ -191,7 +193,9 @@ translated-name:
     name: "&aInventario Básico"
 ```
 
-## Patterns
+***
+
+### `patterns`
 
 After creating your [patterns](patterns.md), add them to your inventory like this:
 
@@ -235,3 +239,40 @@ items:
 ```
 
 Using patterns helps reduce the complexity and size of individual inventory configurations by allowing you to define reusable layouts or elements. This is particularly useful for maintaining consistency across multiple inventories and making future adjustments easier.
+
+***
+
+### `conditional-name`
+
+Allows dynamic inventory names based on player [requirements](buttons/requirements.md).
+
+```yaml
+# Default inventory name displayed if no conditional name matches
+name: "&8Example &7Player"
+
+# Conditional names based on player requirements
+conditional-name:
+  - name: "&8Example &7Admin"  # Display name if the player meets the admin requirements
+    priority: 1  # Higher priority, this name will be used if requirements are met
+    requirements:
+      - type: permission  # Requirement type: permission-based
+        permission: zmenu.admin  # The player must have this permission
+
+  - name: "&8Example &7Moderator"  # Display name if the player meets the moderator requirements
+    priority: 0  # Lower priority than admin, but higher than the default name
+    requirements:
+      - type: permission  # Requirement type: permission-based
+        permission: zmenu.mod  # The player must have this permission
+```
+
+#### `name`
+
+The alternative inventory name displayed when the conditions are met.
+
+#### `priority`
+
+Determines which name is selected if multiple conditions are met. **Higher** values take precedence over lower values.
+
+#### `requirements`
+
+[Requirements](buttons/requirements.md) that must be met for a specific name to be applied
