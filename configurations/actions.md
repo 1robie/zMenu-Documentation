@@ -299,7 +299,7 @@ CurrenciesAPI : [https://github.com/Traqueur-dev/CurrenciesAPI](https://github.c
 
 ***
 
-## `deposite`
+## `deposit`
 
 ```yaml
 - type: deposit
