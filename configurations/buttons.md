@@ -8,7 +8,7 @@ description: All information about the buttons
 
 Buttons allow you to <mark style="color:green;">customize</mark> the actions in your inventory. You need to specify the type of each button and configure the elements specific to that button type. Below, you'll find the buttons that are integrated by default in the plugin; other plugins can also add new types of buttons.
 
-For each button, you must specify an `Item`. To learn how to configure an `Item`, go [here](../items.md).
+For each button, you must specify an `Item`. To learn how to configure an `Item`, go [here](items.md).
 
 ## Configuration
 
@@ -40,7 +40,7 @@ Specify the slot where your item will be displayed.
 * To place multiple items in the same slot, you must use the `else` button.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/slot.png" alt=""><figcaption><p>Double chest slots</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/slot.png" alt=""><figcaption><p>Double chest slots</p></figcaption></figure>
 
 To display a button on multiple slots, you can do it like this:
 
@@ -296,7 +296,7 @@ placeholders:
 update: <true or false>
 ```
 
-Enables the automatic update of the item's name and lore. To configure the update interval, please refer to [this section](../inventories.md#update-interval).
+Enables the automatic update of the item's name and lore. To configure the update interval, please refer to [this section](inventories.md#update-interval).
 
 ***
 
@@ -413,7 +413,7 @@ items:
             action: equals_string
 ```
 
-<figure><img src="../../.gitbook/assets/error_item.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/error_item.gif" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -562,7 +562,7 @@ items:
       name: "&fPrevious"
 ```
 
-<figure><img src="../../.gitbook/assets/pagination.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/pagination.gif" alt=""><figcaption></figcaption></figure>
 
 ## DYNAMIC PAGINATION ([zMenu+](https://minecraft-inventory-builder.com/resources/zmenu.4))
 
@@ -619,7 +619,7 @@ items:
       name: "&fPrevious"
 ```
 
-<figure><img src="../../.gitbook/assets/dynamic_pagination.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/dynamic_pagination.gif" alt=""><figcaption></figcaption></figure>
 
 ## INPUT ([zMenu+](https://minecraft-inventory-builder.com/resources/zmenu.4))
 
@@ -679,4 +679,4 @@ items:
       - type: close
 ```
 
-<figure><img src="../../.gitbook/assets/input.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/input.gif" alt=""><figcaption></figcaption></figure>

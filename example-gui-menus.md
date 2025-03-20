@@ -15,11 +15,11 @@ You must install the following papi extensions:
 > /papi ecloud download Essentials\
 > /papi reload
 
-## [Complexe action](https://github.com/Maxlego08/zMenuExample/blob/master/complex\_actions.yml)
+## [Complexe action](https://github.com/Maxlego08/zMenuExample/blob/master/complex_actions.yml)
 
 An example of a gui converted from [DeluxeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/files#requirements-menu) to zMenu. The menu contains all the elements proposed by [DelexeMenu](https://wiki.helpch.at/clips-plugins/deluxemenus/files#requirements-menu).
 
-Here you have an example of a menu that will use a button of type `PERFORM_COMMAND` with [actions](configurations/buttons/#actions). You have an example of a shop that can be created with the plugin. To create a more complete and simple shop you have the [zShop](https://groupez.dev/resources/zshop.2) addon.
+Here you have an example of a menu that will use a button of type `PERFORM_COMMAND` with [actions](configurations/buttons.md#actions). You have an example of a shop that can be created with the plugin. To create a more complete and simple shop you have the [zShop](https://groupez.dev/resources/zshop.2) addon.
 
 You must install the following papi extensions:
 

@@ -22,7 +22,7 @@ The material of the item. You can use a placeholder to display a material.
 > * FREE - [SlimeFun](https://github.com/Slimefun/Slimefun4) (slimefun:\<item name>) Example: `material: "slimefun:<item name>"`
 > * FREE - [Nova](https://github.com/xenondevs/Nova) (nova:\<item/block name>) Example: `material: "nova:<item/block name>"`
 > * Base64 (base64:\<item in base64) Retrieve this value in base64 with the command `/zm save <item name> base64`
-> * [PlayerHead ](buttons/#playerhead)(playerHead: \<player name>) Displays the head of a player. Example: `playerHead: "%player%"` Displays the head of the player who opens the inventory
+> * [PlayerHead ](buttons.md#playerhead)(playerHead: \<player name>) Displays the head of a player. Example: `playerHead: "%player%"` Displays the head of the player who opens the inventory
 
 ***
 

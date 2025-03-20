@@ -1,0 +1,344 @@
+---
+description: Actions that can be performed after a requirement
+---
+
+# ☢️ Actions
+
+With a requirement, you can define actions for both success and failure. Here are the actions that can be performed.
+
+**Example:** You will need to create an action list like this:
+
+```yaml
+success:
+  - type: player_command
+    commands:
+      - "firstcommand"
+      - "seconds commands %player%"
+  - type: console_command
+    commands:
+      - "firstcommand"
+      - "seconds commands %player%"      
+  - type: message
+    messages:
+      - "firstcommand"
+      - "seconds commands %player%"   
+```
+
+You can add a **delay**, in ticks, for each item in the list below. Do it like this:
+
+```yaml
+success:
+  - type: player_command
+    delay: 10 # 10 ticks
+    commands:
+      - "firstcommand"
+      - "seconds commands %player%"
+```
+
+***
+
+## `player command`
+
+```yaml
+- type: player command
+  commands:
+    - "firstcommand"
+    - "seconds commands %player%"
+  command-in-chat: false # false by default
+```
+
+Executes commands as the player. You can also send the command in the player's chat.
+
+***
+
+## `random player command`
+
+```yaml
+- type: random_player_command
+  amount: 1 # Default value
+  commands:
+    - "firstcommand"
+    - "seconds commands %player%"
+  command-in-chat: false # false by default
+```
+
+Executes random commands as the player. You can also send the command in the player's chat.
+
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+
+***
+
+## `console command`
+
+```yaml
+- type: console_command
+  commands:
+    - "firstcommand"
+    - "seconds commands %player%"
+```
+
+Executes commands as the console.
+
+***
+
+## `random console command`
+
+```yaml
+- type: random_console_command
+  amount: 1 # Default value
+  commands:
+    - "firstcommand"
+    - "seconds commands %player%"
+```
+
+Execute random commands from the list.
+
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+
+***
+
+## `message`
+
+```yaml
+- type: message
+  messages:
+    - "my message"
+    - "my second messages"
+  mini-message: true # true by default
+```
+
+Sends a message to the player. You can use placeholders, color codes, and format codes. The **MiniMessage** format is enabled by default if your server supports it.
+
+***
+
+## `broadcast`
+
+```yaml
+- type: broadcast
+  messages:
+    - "my message"
+    - "my second message to %player%"
+  mini-message: true # true by default
+```
+
+Sends a message to all online players. You can use placeholders, color codes, and format codes. The **MiniMessage** format is enabled by default if your server supports it.
+
+***
+
+## `chat`
+
+```yaml
+- type: chat
+  messages:
+    - "my message"
+```
+
+Sends messages on behalf of the player. You can use placeholders, color codes, and format codes. **MiniMessage** format is enabled by default if your server supports it.
+
+***
+
+## `close`
+
+```yaml
+- type: close
+```
+
+Closes the player's inventory.
+
+***
+
+## `inventory`
+
+```yaml
+- type: inventory
+  inventory: <inventory name>
+  plugin: <plugin name>
+  page: <page>
+  arguments: <argument list>
+```
+
+Opens an inventory.
+
+## `connect`
+
+```yaml
+- type: connect
+  server: <server name>
+```
+
+Allows sending the player to another server, only works with BungeeCord and Velocity.
+
+***
+
+## `sound`
+
+```yaml
+- type: sound
+  sound: <xsound>
+  pitch: <sound pitch> # 1.0f by default
+  volume: <sound volume> # 1.0f by default
+```
+
+Send a sound to a player, you must use [XSound](https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XSound.java) for sound.
+
+***
+
+## `broadcast sound`
+
+```yaml
+- type: broadcast_sound
+  sound: <xsound>
+  pitch: <sound pitch> # 1.0f by default
+  volume: <sound volume> # 1.0f by default
+```
+
+Send a sound to the online players, you must use [XSound](https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XSound.java) for sound.
+
+***
+
+## `data`
+
+```yaml
+- type: data
+  action: <SET/REMOVE/ADD/SUBTRACT>
+  key: <data key>
+  value: <data value>
+  seconds: <expire seconds> # 0 by default
+```
+
+Update [player data](player-data.md).
+
+***
+
+## `refresh`
+
+```yaml
+- type: refresh  
+```
+
+Refresh current button. Works only in click requirement.
+
+***
+
+## `back`
+
+```yaml
+- type: back
+```
+
+Refresh current button. Works only in click requirement.
+
+***
+
+## `back`
+
+```yaml
+- type: back
+```
+
+Return to previous inventory.
+
+***
+
+## `shopkeeper`
+
+```yaml
+- type: shopkeeper
+  name: <shopkeeper name>
+```
+
+Open a [Shopkeeper](https://www.spigotmc.org/threads/shopkeepers.447969/) trading inventory
+
+***
+
+## `book`
+
+```yaml
+- type: book
+  author: "Maxlego08" # Book author
+  title: "&cTest" # Book title
+  lines: # Book pages
+    1: # First page
+      - '     #34ebe8zMenu'
+      - ''
+      - ''
+      - '<hover:show_text:"#34eba8Open an url !"><click:open_url:"https://minecraft-inventory-builder.com/">#f0af24Open URL<reset>'
+```
+
+Opens a book for the player. You can specify the title, author, and pages of the book.
+
+***
+
+## `actionbar`
+
+```yaml
+- type: actionbar
+  message: "my message"
+  minimessage: true # true by default
+```
+
+Allows you to send a message in the action bar of the player. You can use placeholders and color/format codes here. **MiniMessage** format is enabled by default if your server supports it.
+
+***
+
+## `withdraw`
+
+```yaml
+- type: withdraw
+  amount: <amount>
+  currency: <currency name>
+  economy: <economy name> # Only the zEssentials, CoinsEngine and EcoBits plugins need this  
+```
+
+Allows you to withdraw money from the player’s account. Works with the [BeastTokens](https://www.spigotmc.org/resources/beasttokens-custom-currency.20806/), [Vault](https://www.spigotmc.org/resources/34315/), [PlayerPoints](https://www.spigotmc.org/resources/80745/), [ElementalTokens](https://builtbybit.com/resources/16707/), [ElementalGems](https://builtbybit.com/resources/14920/), [Level](https://www.minecraft.net/), [Experience](https://www.minecraft.net/), [**zEssentials**](https://www.spigotmc.org/resources/118014/), [EcoBits](https://www.spigotmc.org/resources/109967/), [CoinsEngine](https://www.spigotmc.org/resources/84121/) and [VotingPlugin](https://www.spigotmc.org/resources/15358/).\
+CurrenciesAPI : [https://github.com/Traqueur-dev/CurrenciesAPI](https://github.com/Traqueur-dev/CurrenciesAPI)
+
+***
+
+## `deposite`
+
+```yaml
+- type: deposit
+  amount: <amount>
+  currency: <currency name>
+  economy: <economy name> # Only the zEssentials, CoinsEngine and EcoBits plugins need this
+```
+
+Allows you to deposit money from the player’s account. Works with the [BeastTokens](https://www.spigotmc.org/resources/beasttokens-custom-currency.20806/), [Vault](https://www.spigotmc.org/resources/34315/), [PlayerPoints](https://www.spigotmc.org/resources/80745/), [ElementalTokens](https://builtbybit.com/resources/16707/), [ElementalGems](https://builtbybit.com/resources/14920/), [Level](https://www.minecraft.net/), [Experience](https://www.minecraft.net/), [**zEssentials**](https://www.spigotmc.org/resources/118014/), [EcoBits](https://www.spigotmc.org/resources/109967/), [CoinsEngine](https://www.spigotmc.org/resources/84121/) and [VotingPlugin](https://www.spigotmc.org/resources/15358/).\
+CurrenciesAPI : [https://github.com/Traqueur-dev/CurrenciesAPI](https://github.com/Traqueur-dev/CurrenciesAPI)
+
+***
+
+## `title`
+
+```yaml
+- type: title
+  title: <title>
+  subtitle: <sub title>
+  start: <start in milliseconds>
+  duration: <duration in milliseconds>
+  end: <end in milliseconds>
+```
+
+Send a title. You can use placeholders and color/format codes here. **MiniMessage** format is enabled by default if your server supports it.
+
+***
+
+## `teleport`
+
+```yaml
+- type: teleport
+  world: <world> # default world is "world"
+  x: <x>
+  y: <y>
+  z: <z>
+  yaw: <yaw>
+  pitch: <pitch>
+```
+
+Teleport a player
+

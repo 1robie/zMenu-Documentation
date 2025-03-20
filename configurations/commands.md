@@ -98,7 +98,7 @@ actions:
   - ...  
 ```
 
-You can use [actions](buttons/actions.md) that will always be performed when executing the order.
+You can use [actions](actions.md) that will always be performed when executing the order.
 
 ***
 
@@ -163,7 +163,7 @@ commands:
               - "&7You will put a punishment to the player &f&n%target%&r &7with the reason&8: &f%reason%"
 ```
 
-You can define an [action](buttons/actions.md) and auto-completion list for each action.
+You can define an [action](actions.md) and auto-completion list for each action.
 
 You can define whether an argument and required or not with the value `isRequired`, I’ll show you that in the example below.
 

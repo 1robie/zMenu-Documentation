@@ -86,7 +86,7 @@ This option allows you to fill all empty inventory slots with a specific item st
 update-interval: 1000 # 1000ms = 1s
 ```
 
-Specifies how often the buttons in the inventory should be refreshed, in milliseconds. This is useful for dynamic inventories that need to update their content regularly, such as displaying live player stats. Note that for buttons to be updated, they must have the update option enabled. More details can be found [here](buttons/#update).
+Specifies how often the buttons in the inventory should be refreshed, in milliseconds. This is useful for dynamic inventories that need to update their content regularly, such as displaying live player stats. Note that for buttons to be updated, they must have the update option enabled. More details can be found [here](buttons.md#update).
 
 ***
 
@@ -167,7 +167,7 @@ open-with-item:
 
 ### `open-requirement`
 
-For more information, refer to [here](buttons/requirements.md#open-requirement).
+For more information, refer to [here](requirements.md#open-requirement).
 
 ***
 
@@ -245,7 +245,7 @@ Using patterns helps reduce the complexity and size of individual inventory conf
 
 ### `conditional-name`
 
-Allows dynamic inventory names based on player [requirements](buttons/requirements.md).
+Allows dynamic inventory names based on player [requirements](requirements.md).
 
 ```yaml
 # Default inventory name displayed if no conditional name matches
@@ -280,6 +280,6 @@ Determines which name is selected if multiple conditions are met. **Higher** val
 
 #### `requirements`
 
-[Requirements](buttons/requirements.md) that must be met for a specific name to be applied
+[Requirements](requirements.md) that must be met for a specific name to be applied
 
 {% embed url="https://youtu.be/4MZtWmMXn7I" fullWidth="false" %}
