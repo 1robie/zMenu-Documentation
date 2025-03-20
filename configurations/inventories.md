@@ -282,4 +282,4 @@ Determines which name is selected if multiple conditions are met. **Higher** val
 
 [Requirements](buttons/requirements.md) that must be met for a specific name to be applied
 
-<figure><img src="../.gitbook/assets/conditional-name.gif" alt=""><figcaption></figcaption></figure>
+{% embed url="https://youtu.be/4MZtWmMXn7I" fullWidth="false" %}
