@@ -12,7 +12,7 @@ For each button, you must specify an `Item`. To learn how to configure an `Item`
 
 ## Configuration
 
-### TYPE
+### `type`
 
 ```yaml
 type: <button type>
@@ -22,7 +22,7 @@ The type of the button. By default, the type will be set to `NONE`. It is import
 
 ***
 
-### SLOT
+### `slot`
 
 ```yaml
 slot: <number between 0 and inventory limit>
@@ -70,7 +70,7 @@ slots:
 
 ***
 
-### Page
+### `page`
 
 ```yaml
 page: <page numer>
@@ -80,7 +80,7 @@ Allows you to specify the page where the button will be displayed. By default, t
 
 ***
 
-### IsPermanent
+### `is-permanent`
 
 ```yaml
 is-permanent: <true of false>
@@ -90,7 +90,7 @@ Allows you to specify if the button should be displayed on all pages of the inve
 
 ***
 
-### useCache
+### `use-cache`
 
 ```yaml
 use-cache: <true of false>
@@ -100,7 +100,7 @@ Allows you to enable or disable caching on the item. By default, caching will al
 
 ***
 
-### Item
+### `item`
 
 ```yaml
 item: <itemstack>
@@ -110,7 +110,7 @@ Allows you to specify the item that will be displayed. For more information, cli
 
 ***
 
-### Sound
+### `sound`
 
 ```yaml
 sound: ENTITY_COW_HURT
@@ -120,9 +120,13 @@ volume: 0.5
 
 Allows you to play a sound for the player when they click. You must use the sounds available in [XSound.](https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XSound.java) You can also adjust the pitch and volume of the sound.
 
+{% hint style="danger" %}
+We advise you to use an [action](buttons.md#actions) to enjoy more functionality.
+{% endhint %}
+
 ***
 
-### Messages
+### `messages`
 
 ```yaml
 messages:
@@ -133,9 +137,13 @@ messages:
 
 Allows you to send a list of messages to the player upon clicking. You can use the [MiniMessage](https://docs.advntr.dev/minimessage/format.html) format to send messages with click or hover actions.
 
+{% hint style="danger" %}
+We advise you to use an [action](buttons.md#actions) to enjoy more functionality.
+{% endhint %}
+
 ***
 
-### Openlink
+### `open-link`
 
 ```yaml
 link: <link>
@@ -159,7 +167,7 @@ Please use this only if your server is running an older version of Minecraft. Ot
 messages:
   - "&8(&6zMenu&8) &fAdd your server to the site &3Serveur Minecraft Vote"
   - "&8(&6zMenu&8) %link% &d!"
-openLink:
+open-link:
   link: "https://serveur-minecraft-vote.fr/utiliser/un/code/cadeau?code=ZMENU"
   message: "&b&lClick here"
   replace: "%link%"
@@ -169,7 +177,7 @@ openLink:
 
 ***
 
-### CloseInventory
+### `close-inventory`
 
 ```yaml
 close-inventory: <true of false>
@@ -179,7 +187,7 @@ Allows you to close the inventory after clicking.
 
 ***
 
-### RefreshOnClick
+### `refresh-on-click`
 
 ```yaml
 refresh-on-click: <true or false>
@@ -187,9 +195,13 @@ refresh-on-click: <true or false>
 
 Allows the button to refresh after a click. You can use this feature to create a shop, for example. An example is provided in the default configuration.
 
+{% hint style="danger" %}
+
+{% endhint %}
+
 ***
 
-### PlayerHead
+### `player-head`
 
 ```yaml
 player-head: <placeholder>
@@ -201,7 +213,7 @@ A caching system ensures the direct display of the skin for the heads.
 
 ***
 
-### Permission
+### `permission`
 
 ```yaml
 permission: <permission>
@@ -217,9 +229,13 @@ permission:
   - "!second.permission"
 ```
 
+{% hint style="danger" %}
+We advise you to use a [view-requirement](requirements.md#view-requirement) to enjoy more functionality.
+{% endhint %}
+
 ***
 
-### Or Permission
+### `or-permission`
 
 Allows you to define a list of permissions, where the player only needs to have one of them.
 
@@ -229,9 +245,13 @@ or-permission:
   - "!second.permission"
 ```
 
+{% hint style="danger" %}
+We advise you to use a [view-requirement](requirements.md#view-requirement) to enjoy more functionality.
+{% endhint %}
+
 ***
 
-### Else
+### `else`
 
 ```yaml
 else: <else button>
@@ -253,7 +273,7 @@ items:
 
 ***
 
-### Placeholder
+### `placeholder`
 
 ```yaml
   placeholder: <placeholder>
@@ -288,9 +308,13 @@ placeholders:
     action: <your action>
 ```
 
+{% hint style="danger" %}
+We advise you to use a [view-requirement](requirements.md#view-requirement) to enjoy more functionality.
+{% endhint %}
+
 ***
 
-### Update
+### `update`
 
 ```yaml
 update: <true or false>
@@ -300,7 +324,7 @@ Enables the automatic update of the item's name and lore. To configure the updat
 
 ***
 
-### UpdateMasterButton
+### `update-master-button`
 
 ```yaml
 update-master-button: <true or false>
@@ -310,7 +334,7 @@ Allows you to completely update the button. You need to enable the update option
 
 ***
 
-### UpdateOnClick
+### `update-on-click`
 
 ```yaml
 update-on-click: <true of false>
@@ -320,7 +344,7 @@ Allows your button to be updated whenever a player clicks anywhere in the invent
 
 ***
 
-### Commands
+### `commands`
 
 ```yaml
 commands: 
@@ -329,9 +353,13 @@ commands:
 
 Allows the player to execute a list of commands. You can use the placeholder `%player%` to retrieve the username of the player executing the commands.
 
+{% hint style="danger" %}
+We advise you to use an [action](buttons.md#actions) to enjoy more functionality.
+{% endhint %}
+
 ***
 
-### Console Commands
+### `console-commands`
 
 ```yaml
 console-commands: # Commands to be executed by the console no matter the click
@@ -347,9 +375,13 @@ console-permission: "<permission>
 
 You can execute commands from the console based on the player's click, as well as commands that require specific player permissions. You can use the placeholder `%player%` to retrieve the username of the player executing the commands.
 
+{% hint style="danger" %}
+We advise you to use an [action](buttons.md#actions) to enjoy more functionality.
+{% endhint %}
+
 ***
 
-### View Requirement
+### `view-requirement`
 
 ```yaml
 view-requirement:
@@ -364,13 +396,13 @@ Sets the conditions the player must meet to see the button. This can include per
 
 ***
 
-### Click Requirement
+### `click-requirement`
 
 Defines the conditions the player must meet to click on the button. These requirements are checked when the player clicks, and actions can be executed based on the success or failure of these conditions. For more information, refer to [this section](requirements.md#click-requirement).
 
 ***
 
-### Actions
+### `actions`
 
 You can define a list of actions to perform when clicking. These actions can include sending messages, executing commands, opening a book, and more. For more information, refer to [this section](actions.md).
 
@@ -383,7 +415,7 @@ actions:
 
 ***
 
-### Error item ([zMenu+](https://minecraft-inventory-builder.com/resources/zmenu.4))
+### `error-item`
 
 **Example of Inventory with Fail Item:**
 
@@ -397,7 +429,7 @@ items:
     item:
       material: DIAMOND
     slot: 22
-    error_item:
+    error-item:
       duration: 10 # Duration of item display
       item: # Item to display
         material: BARRIER
@@ -415,13 +447,19 @@ items:
 
 <figure><img src="../.gitbook/assets/error_item.gif" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+
 ***
 
-## NONE
+## `NONE`
 
 The `NONE` type is the default type; it simply displays a button. You don't need to specify it, as it will be automatically selected if the plugin doesn't detect a different type.
 
-## INVENTORY
+***
+
+## `INVENTORY`
 
 The `INVENTORY` type allows the player to open a new inventory.
 
@@ -441,13 +479,19 @@ arguments:
 
 You must specify the inventory's name, which corresponds to the file name where the inventory is stored. Additionally, it's recommended to specify the plugin name to avoid confusion if two inventories share the same name.
 
-## BACK
+***
+
+## `BACK`
 
 The `BACK` type allows you to return to the previous inventory.
 
-## HOME
+***
+
+## `HOME`
 
 The `HOME` type allows you to return to the main inventory, which is the first one that was opened.
+
+***
 
 ## NEXT
 
@@ -468,7 +512,9 @@ next:
       material: BLACK_STAINED_GLASS_PANE
 ```
 
-## PREVIOUS
+***
+
+## `PREVIOUS`
 
 The `PREVIOUS` type allows you to go to the previous page, if it exists. You can use the `else` element to display another button if there is no previous page.
 
@@ -485,11 +531,15 @@ previous:
       material: BLACK_STAINED_GLASS_PANE
 ```
 
-## MAINMENU
+***
+
+## `MAINMENU`
 
 The `MAINMENU` type allows you to return to the main inventory specified in the `config.json`.
 
-## JUMP
+***
+
+## `JUMP`
 
 The `JUMP` type allows you to change to a predefined page.
 
@@ -499,7 +549,9 @@ jump-button:
   toPage: 5
 ```
 
-## PAGINATION ([zMenu+](https://minecraft-inventory-builder.com/resources/zmenu.4))
+***
+
+## `PAGINATION`
 
 **Example of Inventory with Pagination Button:**
 
@@ -564,7 +616,13 @@ items:
 
 <figure><img src="../.gitbook/assets/pagination.gif" alt=""><figcaption></figcaption></figure>
 
-## DYNAMIC PAGINATION ([zMenu+](https://minecraft-inventory-builder.com/resources/zmenu.4))
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+
+***
+
+## `DYNAMIC_PAGINATION`&#x20;
 
 This feature allows you to create a dynamic inventory using placeholders, offering limitless possibilities such as creating a ranking system. The only limit is your imagination.
 
@@ -621,7 +679,13 @@ items:
 
 <figure><img src="../.gitbook/assets/dynamic_pagination.gif" alt=""><figcaption></figcaption></figure>
 
-## INPUT ([zMenu+](https://minecraft-inventory-builder.com/resources/zmenu.4))
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+
+***
+
+## `INPUT`
 
 This feature allows the player to input a message in the chat and triggers actions based on success or error.
 
@@ -680,3 +744,8 @@ items:
 ```
 
 <figure><img src="../.gitbook/assets/input.gif" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+

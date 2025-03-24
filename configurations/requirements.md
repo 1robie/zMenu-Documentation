@@ -168,6 +168,8 @@ click-requirement:
 
 Checks if the player has the specified permission. To reverse the condition, add an exclamation mark `!` in front of the permission, like this: `!<permission>`.
 
+***
+
 ### `placeholder`
 
 ```yaml
@@ -182,6 +184,21 @@ Allows you to define a permission using a placeholder. You must specify the plac
 
 You can specify a player; otherwise, the player who opens the inventory will be used by default.
 
+**Actions:**
+
+* **`BOOLEAN`** (alias: `b=`): Checks if a value is true or false.
+* **`EQUALS_STRING`** (alias: `s=`): Checks if the text is strictly equal to the value.
+* **`EQUALSIGNORECASE_STRING`** (alias: `s==`): Checks if the text is equal to the value, ignoring case.
+* **`CONTAINS_STRING`** (alias: `sc`): Checks if the text is contained within the value.
+* **`DIFFERENT_STRING`** (alias: `s!=`): Checks if the text is different from the value.
+* **`SUPERIOR`** (alias: `>`): Checks if a number is strictly greater than the value.
+* **`LOWER`** (alias: `<`): Checks if a number is strictly less than the value.
+* **`SUPERIOR_OR_EQUAL`** (alias: `>=`): Checks if a number is greater than or equal to the value.
+* **`LOWER_OR_EQUAL`** (alias: `<=`): Checks if a number is less than or equal to the value.
+* **`EQUAL_TO`** (alias: `==`): Verifies that two numbers are identical.
+
+***
+
 ### `regex`
 
 ```yaml
@@ -194,6 +211,8 @@ Checks if the input matches the specified regex pattern. The input can be a plac
 
 Visit [regexr.com](https://regexr.com) to create your regex pattern.
 
+***
+
 ### `item`
 
 ```yaml
@@ -205,6 +224,8 @@ Visit [regexr.com](https://regexr.com) to create your regex pattern.
 
 Checks if the player has a specific item in their inventory.
 
+***
+
 ### `job`
 
 ```yaml
@@ -213,6 +234,8 @@ Checks if the player has a specific item in their inventory.
 ```
 
 Allows to check if the player has the job. Works with [JobReborn](https://www.spigotmc.org/resources/jobs-reborn.4216/) plugin.
+
+***
 
 ### `luckperm`
 
@@ -223,6 +246,8 @@ Allows to check if the player has the job. Works with [JobReborn](https://www.sp
 
 Allows to check if the player is in a group. Works with [LuckPerms](https://www.spigotmc.org/resources/luckperms.28140/) plugin.
 
+***
+
 ### `playername`
 
 ```yaml
@@ -231,6 +256,8 @@ Allows to check if the player is in a group. Works with [LuckPerms](https://www.
 ```
 
 Allows to check if a placeholder returns a text that can be a player nickname.
+
+***
 
 ### `money`
 
