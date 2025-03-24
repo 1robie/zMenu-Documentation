@@ -159,29 +159,87 @@ click-requirement:
 
 ## Requirements type
 
-<table data-full-width="true"><thead><tr><th width="519">Permissible</th><th>Description</th></tr></thead><tbody><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: permission
-  permission: &#x3C;permission>
-</code></pre></td><td>Checks if the player has the specified permission. To reverse the condition, add an exclamation mark <code>!</code> in front of the permission, like this: <code>!&#x3C;permission></code>.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: placeholder
-  placeholder: &#x3C;placeholder>
-  value: &#x3C;placeholder value>
-  action: &#x3C;placeholder action>
-  target: &#x3C;player / placeholder with player name>
-</code></pre></td><td><p>Allows you to define a permission using a placeholder. You must specify the placeholder, the action to be performed with the value, and the value that will be checked. For more information, <a href="https://docs.zmenu.dev/configurations/buttons#placeholder">click here</a>.</p><p>You can specify a player; otherwise, the player who opens the inventory will be used by default.</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: regex
-  regex: &#x3C;regex>
-  input: &#x3C;placeholder>
-</code></pre></td><td><p>Checks if the input matches the specified regex pattern. The input can be a placeholder.</p><p>Visit <a href="https://regexr.com">regexr.com</a> to create your regex pattern.</p></td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: item
-  material: &#x3C;material>
-  amount: &#x3C;amount of item>
-  modelId: &#x3C;model id> # default 0
-</code></pre></td><td>Checks if the player has a specific item in their inventory.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: job
-  job: &#x3C;job name>
-</code></pre></td><td>Allows to check if the player has the job. Works with <a href="https://www.spigotmc.org/resources/jobs-reborn.4216/">JobReborn</a> plugin.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: luckperm
-  group: &#x3C;group name>
-</code></pre></td><td>Allows to check if the player is in a group. Works with <a href="https://www.spigotmc.org/resources/luckperms.28140/">LuckPerms</a> plugin.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: playername
-  player-name: &#x3C;placeholder>
-</code></pre></td><td>Allows to check if a placeholder returns a text that can be a player nickname.</td></tr><tr><td><pre class="language-yaml"><code class="lang-yaml">- type: money
-  amount: &#x3C;amount>
-  currency: &#x3C;currency name>
-  economy: &#x3C;economy name> # Only the zEssentials, CoinsEngine and EcoBits plugins need this
-  
-</code></pre></td><td>Check if the player has enough money in their account. This only works with <a href="https://www.spigotmc.org/resources/beasttokens-custom-currency.20806/">BeastTokens</a>, <a href="https://www.spigotmc.org/resources/34315/">Vault</a>, <a href="https://www.spigotmc.org/resources/80745/">PlayerPoints</a>, <a href="https://builtbybit.com/resources/16707/">ElementalTokens</a>, <a href="https://builtbybit.com/resources/14920/">ElementalGems</a>, <a href="https://www.minecraft.net/">Level</a>, <a href="https://www.minecraft.net/">Experience</a>, <a href="https://www.spigotmc.org/resources/118014/"><strong>zEssentials</strong></a>, <a href="https://www.spigotmc.org/resources/109967/">EcoBits</a>, <a href="https://www.spigotmc.org/resources/84121/">CoinsEngine</a> and <a href="https://www.spigotmc.org/resources/15358/">VotingPlugin</a>.<br>CurrenciesAPI : <a href="https://github.com/Traqueur-dev/CurrenciesAPI">https://github.com/Traqueur-dev/CurrenciesAPI</a></td></tr></tbody></table>
+### `permission`
+
+```yaml
+- type: permission
+  permission: <permission>
+```
+
+Checks if the player has the specified permission. To reverse the condition, add an exclamation mark `!` in front of the permission, like this: `!<permission>`.
+
+### `placeholder`
+
+```yaml
+- type: placeholder
+  placeholder: <placeholder>
+  value: <placeholder value>
+  action: <placeholder action>
+  target: <player / placeholder with player name>
+```
+
+Allows you to define a permission using a placeholder. You must specify the placeholder, the action to be performed with the value, and the value that will be checked. For more information, [click here](https://docs.zmenu.dev/configurations/buttons#placeholder).
+
+You can specify a player; otherwise, the player who opens the inventory will be used by default.
+
+### `regex`
+
+```yaml
+- type: regex
+  regex: <regex>
+  input: <placeholder>
+```
+
+Checks if the input matches the specified regex pattern. The input can be a placeholder.
+
+Visit [regexr.com](https://regexr.com) to create your regex pattern.
+
+### `item`
+
+```yaml
+- type: item
+  material: <material>
+  amount: <amount of item>
+  modelId: <model id> # default 0
+```
+
+Checks if the player has a specific item in their inventory.
+
+### `job`
+
+```yaml
+- type: job
+  job: <job name>
+```
+
+Allows to check if the player has the job. Works with [JobReborn](https://www.spigotmc.org/resources/jobs-reborn.4216/) plugin.
+
+### `luckperm`
+
+```yaml
+- type: luckperm
+  group: <group name>
+```
+
+Allows to check if the player is in a group. Works with [LuckPerms](https://www.spigotmc.org/resources/luckperms.28140/) plugin.
+
+### `playername`
+
+```yaml
+- type: playername
+  player-name: <placeholder>
+```
+
+Allows to check if a placeholder returns a text that can be a player nickname.
+
+### `money`
+
+```yaml
+- type: money
+  amount: <amount>
+  currency: <currency name>
+  economy: <economy name> # Only the zEssentials, CoinsEngine and EcoBits plugins need this
+```
+
+Check if the player has enough money in their account. This only works with [BeastTokens](https://www.spigotmc.org/resources/beasttokens-custom-currency.20806/), [Vault](https://www.spigotmc.org/resources/34315/), [PlayerPoints](https://www.spigotmc.org/resources/80745/), [ElementalTokens](https://builtbybit.com/resources/16707/), [ElementalGems](https://builtbybit.com/resources/14920/), [Level](https://www.minecraft.net/), [Experience](https://www.minecraft.net/), [**zEssentials**](https://www.spigotmc.org/resources/118014/), [EcoBits](https://www.spigotmc.org/resources/109967/), [CoinsEngine](https://www.spigotmc.org/resources/84121/) and [VotingPlugin](https://www.spigotmc.org/resources/15358/).\
+CurrenciesAPI : [https://github.com/Traqueur-dev/CurrenciesAPI](https://github.com/Traqueur-dev/CurrenciesAPI)
