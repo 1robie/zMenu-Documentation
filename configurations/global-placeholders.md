@@ -39,23 +39,31 @@ item-in-second-page:
 
 ## Modifications
 
-### **Upper**
+### **`upper`**
 
 `%upper_<placeholder name>%` transforms your text to uppercase.
 
-### **Lower**
+***
+
+### **`lower`**
 
 `%lower_<placeholder name>%` transforms your text to lowercase.
 
-### **Capitalize**
+***
+
+### **`capitalize`**
 
 `%capitalize_<placeholder name>%` capitalizes your text (the first letter will be uppercase, and the rest lowercase).
 
-### **Add One**
+***
+
+### **`add_one`**
 
 `%add_one_<placeholder name>%` adds 1 to your placeholder. This only works if the value is a number.
 
-### **Remove One**
+***
+
+### **`remove_one`**
 
 `%remove_one_<placeholder name>%` subtracts 1 from your placeholder. This only works if the value is a number.
 

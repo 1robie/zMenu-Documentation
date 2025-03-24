@@ -68,7 +68,7 @@ commands:
 
 ***
 
-### Command
+### `command`
 
 ```yaml
 command: <command>
@@ -78,7 +78,7 @@ Main command
 
 ***
 
-### Aliases
+### `aliases`
 
 ```yaml
 aliases:
@@ -91,7 +91,7 @@ The aliases of the command.
 
 ***
 
-### Action
+### `action`
 
 ```yaml
 actions:
@@ -102,7 +102,7 @@ You can use [actions](actions.md) that will always be performed when executing t
 
 ***
 
-### Permission
+### `permission`
 
 ```yaml
 permission: <permission>
@@ -112,7 +112,7 @@ The permission the player must have to open the inventory.
 
 ***
 
-### Inventory
+### `inventory`
 
 ```yaml
 inventory: <inventory name>
@@ -128,7 +128,7 @@ inventory: "<plugin name>:<inventory name>"
 
 ***
 
-### Arguments
+### `arguments`
 
 ```yaml
 arguments:
