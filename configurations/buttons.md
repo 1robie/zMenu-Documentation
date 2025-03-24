@@ -196,7 +196,7 @@ refresh-on-click: <true or false>
 Allows the button to refresh after a click. You can use this feature to create a shop, for example. An example is provided in the default configuration.
 
 {% hint style="danger" %}
-
+We advise you to use an [action](buttons.md#actions) to enjoy more functionality. If you update the status of a player with orders, to be sure that the inventory update is done correctly, you must put a delay of 1 tick.
 {% endhint %}
 
 ***

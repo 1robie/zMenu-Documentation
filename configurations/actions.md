@@ -222,6 +222,10 @@ Update [player data](player-data.md).
 
 Refresh current button. Works only in click requirement.
 
+{% hint style="warning" %}
+If you update the status of a player with orders, to be sure that the inventory update is done correctly, you must put a delay of 1 tick.
+{% endhint %}
+
 ***
 
 ## `back`
