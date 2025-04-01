@@ -270,3 +270,111 @@ Allows to check if a placeholder returns a text that can be a player nickname.
 
 Check if the player has enough money in their account. This only works with [BeastTokens](https://www.spigotmc.org/resources/beasttokens-custom-currency.20806/), [Vault](https://www.spigotmc.org/resources/34315/), [PlayerPoints](https://www.spigotmc.org/resources/80745/), [ElementalTokens](https://builtbybit.com/resources/16707/), [ElementalGems](https://builtbybit.com/resources/14920/), [Level](https://www.minecraft.net/), [Experience](https://www.minecraft.net/), [**zEssentials**](https://www.spigotmc.org/resources/118014/), [EcoBits](https://www.spigotmc.org/resources/109967/), [CoinsEngine](https://www.spigotmc.org/resources/84121/) and [VotingPlugin](https://www.spigotmc.org/resources/15358/).\
 CurrenciesAPI : [https://github.com/Traqueur-dev/CurrenciesAPI](https://github.com/Traqueur-dev/CurrenciesAPI)
+
+***
+
+### `and`
+
+Allows to combine multiple requirements into one.
+
+```yaml
+- type: and
+  requirements:
+    - ... 
+```
+
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+
+<details>
+
+<summary>Example <code>and</code> + <code>or</code> requirement</summary>
+
+This example uses an `and` and `or` requirement. The player must have the permission `zmenu.test` **and** `zmenu.test2` and must have the permission `zmenu.test3` **or** the permission `zmenu.test4`.
+
+```yaml
+name: "&8Test And/Or"
+size: 54
+items:
+  test:
+    slot: 22
+    view-requirement:
+      requirements:
+        - type: and
+          requirements:
+            - type: permission
+              permission: zmenu.test
+              success:
+                - type: message
+                  messages:
+                    - "&7Test And 1 - &aOK"
+              deny:
+                - type: message
+                  messages:
+                    - "&7Test And 1 - &cKO"
+            - type: permission
+              permission: zmenu.test2
+              success:
+                - type: message
+                  messages:
+                    - "&7Test And 2 - &aOK"
+              deny:
+                - type: message
+                  messages:
+                    - "&7Test And 2 - &cKO"
+        - type: or
+          minimum: 1
+          random: true
+          requirements:
+            - type: permission
+              permission: zmenu.test3
+              success:
+                - type: message
+                  messages:
+                    - "&7Test And 3 - &aOK"
+              deny:
+                - type: message
+                  messages:
+                    - "&7Test And 3 - &cKO"
+            - type: permission
+              permission: zmenu.test4
+              success:
+                - type: message
+                  messages:
+                    - "&7Test And 4 - &aOK"
+              deny:
+                - type: message
+                  messages:
+                    - "&7Test And 4 - &cKO"
+    item:
+      material: PAPER
+      name: "&aTest And/Or"
+    else:
+      item:
+        material: PAPER
+        name: "&cTest And/Or"
+```
+
+</details>
+
+***
+
+### `or`
+
+Allows to combine multiple requirements into one and have a minimum of required.
+
+```yaml
+- type: or
+  minimum: 1
+  random: false
+  requirements:
+    - ...
+```
+
+The random option determines whether the list of requirements should be traversed randomly or not.
+
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
+
