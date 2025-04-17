@@ -91,7 +91,7 @@ The aliases of the command.
 
 ***
 
-### `action`
+### `actions`
 
 ```yaml
 actions:
