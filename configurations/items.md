@@ -14,8 +14,10 @@ The material of the item. You can use a placeholder to display a material.
 >
 > * [Material](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html) - Example: `material: STONE`
 > * [Placeholder](https://www.spigotmc.org/resources/placeholderapi.6245/) value - Example: `material: %your_placeholder_material%`
+> * [Armor](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/EquipmentSlot.html) - Example: `material: "armor:<slot>"` (slot: HEAD, CHEST, LEGS, FEET,etc.)
 > * FREE - [zHead](https://www.spigotmc.org/resources/zhead-database.115717/) **RECOMMENDED** (zhd:\<id>) Example: `material: "zhd:<id>"`
-> * PAID - [MagicCosmetics](https://polymart.org/resource/magic-cosmetics-20-off.2070) (magic\_cosmetics:\<HAT/HAT/BAG/WALKING\_STICK/BALLOON/SPRAY>) Example: `material: "magic_cosmetics:<HAT/HAT/BAG/WALKING_STICK/BALLOON/SPRAY>"`
+> * PAID - [MagicCosmetics](https://polymart.org/resource/magic-cosmetics-20-off.2070) (magic_cosmetics:<HAT/BAG/WALKING_STICK/BALLOON/SPRAY>) Example: `material: "magic_cosmetics:<HAT/BAG/WALKING_STICK/BALLOON/SPRAY>"`
+> * PAID - [Hmccosmetics](https://www.spigotmc.org/resources/hmccosmetics.100107/) - Example: `material: "hmc_cosmetics:<type>"` or `material: "hmc_cosmetics:<type>-<player name>"` (type: HELMET, BELLON, etc.)
 > * PAID - zItems (ztems:\<item name>) Example: `material: "zitems:<id>"`
 > * PAID - [HeadDatabase](https://www.spigotmc.org/resources/head-database.14280/) (hdb:\<id>) Example: `material: "hdb:<id>"`
 > * PAID - [Oraxen](https://www.spigotmc.org/resources/%E2%98%84%EF%B8%8F-oraxen-add-items-blocks-armors-hats-food-furnitures-plants-and-gui-1-18-1-20-1.72448/) (oraxen:\<item name>) Example: `material: "oraxen:<item name>"`
