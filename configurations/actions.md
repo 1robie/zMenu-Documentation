@@ -350,7 +350,7 @@ Teleport a player
 
 ```yaml
 - type: discord
-  webhook: "https://discord.com/api/webhooks/<url>
+  webhook: "https://discord.com/api/webhooks/<url>"
   message: "Test webhook"
 ```
 
