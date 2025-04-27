@@ -222,6 +222,10 @@ Update [player data](player-data.md).
 
 Refresh current button. Works only in click requirement.
 
+{% hint style="warning" %}
+If you update the status of a player with orders, to be sure that the inventory update is done correctly, you must put a delay of 1 tick.
+{% endhint %}
+
 ***
 
 ## `back`
@@ -342,3 +346,40 @@ Send a title. You can use placeholders and color/format codes here. **MiniMessag
 
 Teleport a player
 
+## `discord`
+
+```yaml
+- type: discord
+  webhook: "https://discord.com/api/webhooks/<url>
+  message: "Test webhook"
+```
+
+Allow to send a discord webhook. You can add a embeds, username, tts etc.
+
+```yaml
+- type: discord
+  webhook: <url>
+  message: <content>
+  avatar: <avatar url>
+  username: <webhook username>
+  embeds:
+    - title: <embed title>
+      description: <embed description>
+      url: <url>
+      color: <hex color>
+      footer:
+        text: <text footer>
+        icon-url: <icon url>
+      thumbnail:
+        url: <url>
+      image:
+        url: <url>
+      auhor:
+        name: <author name>
+        url: <author url>
+        icon-url: <author icon url>
+      fields:
+        - name: <field name>
+          value: <field value>
+          inline: true/false
+```
