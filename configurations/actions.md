@@ -123,12 +123,17 @@ Sends a message to the player. You can use placeholders, color codes, and format
     - "my name %receiver%"
     - "my second message send by %sender%"
   mini-message: true # true by default
+  requirements: 
+    - type: permission
+      permission: "admin.use"
 ```
 
 Sends a message to all online players. You can use placeholders, color codes, and format codes. The **MiniMessage** format is enabled by default if your server supports it.
 
 `%sender%` is the name of the player **sending** the broadcast\
 `%receiver%` is the name of the player who will **receive** the message.
+
+You can set a list of [requirements](requirements.md) to send a message to certain players.
 
 ***
 
