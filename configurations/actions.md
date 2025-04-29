@@ -121,13 +121,13 @@ Sends a message to the player. You can use placeholders, color codes, and format
 - type: broadcast
   messages:
     - "my name %receiver%"
-    - "my second message send by %player%"
+    - "my second message send by %sender%"
   mini-message: true # true by default
 ```
 
 Sends a message to all online players. You can use placeholders, color codes, and format codes. The **MiniMessage** format is enabled by default if your server supports it.
 
-`%player%` is the name of the player **sending** the broadcast\
+`%sender%` is the name of the player **sending** the broadcast\
 `%receiver%` is the name of the player who will **receive** the message.
 
 ***
