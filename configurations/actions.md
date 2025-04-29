@@ -382,7 +382,7 @@ Allow to send a discord webhook. You can add a embeds, username, tts etc.
         url: <url>
       image:
         url: <url>
-      auhor:
+      author:
         name: <author name>
         url: <author url>
         icon-url: <author icon url>
