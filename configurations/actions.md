@@ -120,12 +120,15 @@ Sends a message to the player. You can use placeholders, color codes, and format
 ```yaml
 - type: broadcast
   messages:
-    - "my message"
-    - "my second message to %player%"
+    - "my name %receiver%"
+    - "my second message send by %player%"
   mini-message: true # true by default
 ```
 
 Sends a message to all online players. You can use placeholders, color codes, and format codes. The **MiniMessage** format is enabled by default if your server supports it.
+
+`%player%` is the name of the player **sending** the broadcast\
+`%receiver%` is the name of the player who will **receive** the message.
 
 ***
 
