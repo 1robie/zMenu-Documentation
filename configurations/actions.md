@@ -354,6 +354,8 @@ Send a title. You can use placeholders and color/format codes here. **MiniMessag
 
 Teleport a player
 
+***
+
 ## `discord`
 
 ```yaml
@@ -391,3 +393,42 @@ Allow to send a discord webhook. You can add a embeds, username, tts etc.
           value: <field value>
           inline: true/false
 ```
+
+***
+
+## `discord component`
+
+```yaml
+- type: discord component
+  webhook: "https://discord.com/api/webhooks/<url>"
+  username: "GroupeZ" #Optional
+  avatar_url: "" #Optional
+  component: [
+    {
+      "type": 10,
+      "content": "Never trust a alien with a giant spaghetti."
+    },
+    {
+      "type": 14,
+      "divider": true,
+      "spacing": 2
+    },
+    {
+      "type": 10,
+      "content": "If life gives you invisible unicorn, make invisible unicorn soup."
+    },
+    {
+      "type": 17,
+      "accent_color": 14951974,
+      "spoiler": true,
+      "components": [
+        {
+          "type": 10,
+          "content": "Never trust a grandma with a giant spaghetti."
+        }
+      ]
+    }
+  ]
+```
+
+Send a webhook discord components. To generate your component you must go to the site [https://discord.builders/](https://discord.builders/), then you must copy the result json. You can simplify your json into one line [here](https://jsonformatter.org/json-minify).
