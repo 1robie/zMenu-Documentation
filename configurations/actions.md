@@ -431,4 +431,4 @@ Allow to send a discord webhook. You can add a embeds, username, tts etc.
   ]
 ```
 
-Send a webhook discord components. To generate your component you must go to the site [https://discord.builders/](https://discord.builders/), then you must copy the result json. You can simplify your json into one line [here](https://jsonformatter.org/json-minify).
+Send a [webhook discord components](https://discord.com/developers/docs/components/reference). To generate your component you must go to the site [https://discord.builders/](https://discord.builders/), then you must copy the result json. You can simplify your json into one line [here](https://jsonformatter.org/json-minify).
