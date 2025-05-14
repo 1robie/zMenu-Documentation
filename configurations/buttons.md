@@ -279,9 +279,12 @@ items:
   placeholder: <placeholder>
   value: <value for placeholder>
   action: <action for placeholder>
+  math: <true/false>
 ```
 
 Allows you to define a permission using a placeholder. You must specify the placeholder, the action to be performed with the value, and the value that will be checked.
+
+You can use mathematical expressions if you set math to true, this allows you to do more complex actions.
 
 **Actions:**
 

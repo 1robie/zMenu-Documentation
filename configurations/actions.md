@@ -216,9 +216,12 @@ Send a sound to the online players, you must use [XSound](https://github.com/Cry
   key: <data key>
   value: <data value>
   seconds: <expire seconds> # 0 by default
+  math: <true/false>
 ```
 
 Update [player data](player-data.md).
+
+You can use mathematical expressions if you set math to true, this allows you to do more complex actions. Work only with ADD and SUBTRACT.
 
 ***
 
