@@ -35,3 +35,4 @@
 
 * [🗃️ Plugin's files](plugins-files.md)
 * [🕍 Example GUI menus](example-gui-menus.md)
+* [Mettre à jour vers la nouvelle API](mettre-a-jour-vers-la-nouvelle-api.md)
