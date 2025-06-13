@@ -239,13 +239,13 @@ If you update the status of a player with orders, to be sure that the inventory 
 
 ***
 
-## `back`
+`refresh inventory`
 
 ```yaml
-- type: back
+- type: refresh inventory
 ```
 
-Refresh current button. Works only in click requirement.
+Refreshes the currently open inventory.
 
 ***
 

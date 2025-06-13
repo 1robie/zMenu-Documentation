@@ -554,6 +554,97 @@ jump-button:
 
 ***
 
+## `SWITCH`
+
+The `SWITCH` button allows you to use a placeholder and compare the result with multiple options. This makes it easy to create a quick and simplified display for buttons that require various actions.
+
+```yaml
+switch:
+  <default button here>
+  buttons:
+    "first key":
+      <first button>
+    "second key":
+      <second button>
+    "third key":
+      <third button>          
+    ...
+```
+
+You can put several buttons in your switch. And each button can be as complete as possible, you have no limitation !
+
+{% hint style="info" %}
+You must specify the **slot** for each button.\
+You need to use the `refresh inventory` action to update your switch button.
+{% endhint %}
+
+<details>
+
+<summary>Example</summary>
+
+In this example, the switch button is used to navigate between pages by using player data.
+
+```yaml
+name: "&8Test"
+size: 9
+items:
+  switch:
+    type: SWITCH
+    slot: 4
+    item:
+      material: PAPER
+      name: '&fTuto &7#1'
+      lore:
+        - "&8This is the first page"
+        - ""
+        - "&7Click for the next page"
+    actions:
+      - type: data
+        action: SET
+        key: switch_value
+        value: 2
+      - type: refresh inventory
+    key: "%zmenu_player_value_switch_value%"
+    buttons:
+      "2":
+        slot: 4
+        item:
+          material: PAPER
+          name: '&fTuto &7#2'
+          lore:
+            - "&8This is the second page"
+            - ""
+            - "&7Click for the next page"
+        actions:
+          - type: data
+            action: SET
+            key: switch_value
+            value: 3
+          - type: refresh inventory
+      "3":
+        slot: 4
+        item:
+          material: PAPER
+          name: '&fTuto &7#3'
+          lore:
+            - "&8This is the third page"
+            - ""
+            - "&7Click for the next page"
+        actions:
+          - type: data
+            action: SET
+            key: switch_value
+            value: 1
+          - type: refresh inventory
+
+```
+
+</details>
+
+You can compare numbers by specifying the operator in your switch key. You can use `>=`, `<=`, `>`, and `<`. For example, you could use: `>=10` — your placeholder value must then be greater than or equal to 10.
+
+***
+
 ## `PAGINATION`
 
 **Example of Inventory with Pagination Button:**
