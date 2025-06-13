@@ -8,24 +8,7 @@ Before you start configuring the plugin itemstack, make sure you are using the c
 material: <material>
 ```
 
-The material of the item. You can use a placeholder to display a material.
-
-> **Supported material values:**
->
-> * [Material](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html) - Example: `material: STONE`
-> * [Placeholder](https://www.spigotmc.org/resources/placeholderapi.6245/) value - Example: `material: %your_placeholder_material%`
-> * [Armor](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/EquipmentSlot.html) - Example: `material: "armor:<slot>"` (slot: HEAD, CHEST, LEGS, FEET,etc.)
-> * FREE - [zHead](https://www.spigotmc.org/resources/zhead-database.115717/) **RECOMMENDED** (zhd:\<id>) Example: `material: "zhd:<id>"`
-> * PAID - [MagicCosmetics](https://polymart.org/resource/magic-cosmetics-20-off.2070) (magic_cosmetics:<HAT/BAG/WALKING_STICK/BALLOON/SPRAY>) Example: `material: "magic_cosmetics:<HAT/BAG/WALKING_STICK/BALLOON/SPRAY>"`
-> * PAID - [Hmccosmetics](https://www.spigotmc.org/resources/hmccosmetics.100107/) - Example: `material: "hmc_cosmetics:<type>"` or `material: "hmc_cosmetics:<type>-<player name>"` (type: HELMET, BELLON, etc.)
-> * PAID - zItems (ztems:\<item name>) Example: `material: "zitems:<id>"`
-> * PAID - [HeadDatabase](https://www.spigotmc.org/resources/head-database.14280/) (hdb:\<id>) Example: `material: "hdb:<id>"`
-> * PAID - [Oraxen](https://www.spigotmc.org/resources/%E2%98%84%EF%B8%8F-oraxen-add-items-blocks-armors-hats-food-furnitures-plants-and-gui-1-18-1-20-1.72448/) (oraxen:\<item name>) Example: `material: "oraxen:<item name>"`
-> * PAID - [ItemAdder](https://www.spigotmc.org/resources/%E2%9C%A8itemsadder%E2%AD%90emotes-mobs-items-armors-hud-gui-emojis-blocks-wings-hats-liquids.73355/) (itemsadder:\<item name>) Example: `material: "itemsadder:<item name>"`
-> * FREE - [SlimeFun](https://github.com/Slimefun/Slimefun4) (slimefun:\<item name>) Example: `material: "slimefun:<item name>"`
-> * FREE - [Nova](https://github.com/xenondevs/Nova) (nova:\<item/block name>) Example: `material: "nova:<item/block name>"`
-> * Base64 (base64:\<item in base64) Retrieve this value in base64 with the command `/zm save <item name> base64`
-> * [PlayerHead ](buttons.md#playerhead)(playerHead: \<player name>) Displays the head of a player. Example: `playerHead: "%player%"` Displays the head of the player who opens the inventory
+<table data-full-width="true"><thead><tr><th>Type</th><th>Format / Example</th></tr></thead><tbody><tr><td>Material (Bukkit)</td><td><code>material: STONE</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a></td><td><code>material: %your_placeholder_material%</code></td></tr><tr><td>Armor (slot)</td><td><code>material: "armor:&#x3C;slot>"</code> (e.g. HEAD, CHEST, LEGS, FEET)</td></tr><tr><td><a href="https://www.spigotmc.org/resources/zhead-database.115717/">zHead (FREE)</a></td><td><code>material: "zhd:&#x3C;id>"</code></td></tr><tr><td><a href="https://polymart.org/resource/magic-cosmetics-20-off.2070">MagicCosmetics (PAID)</a></td><td><code>material: "magic_cosmetics:&#x3C;HAT/BAG/WALKING_STICK/BALLOON/SPRAY>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/hmccosmetics.100107/">Hmccosmetics (PAID)</a></td><td><code>material: "hmc_cosmetics:&#x3C;type>"</code> or <code>material: "hmc_cosmetics:&#x3C;type>-&#x3C;player name>"</code></td></tr><tr><td>zItems (PAID)</td><td><code>material: "zitems:&#x3C;id>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/head-database.14280/">HeadDatabase (PAID)</a></td><td><code>material: "hdb:&#x3C;id>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/%E2%98%84%EF%B8%8F-oraxen-add-items-blocks-armors-hats-food-furnitures-plants-and-gui-1-18-1-20-1.72448/">Oraxen (PAID)</a></td><td><code>material: "oraxen:&#x3C;item name>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/%E2%9C%A8itemsadder%E2%AD%90emotes-mobs-items-armors-hud-gui-emojis-blocks-wings-hats-liquids.73355/">ItemsAdder (PAID)</a></td><td><code>material: "itemsadder:&#x3C;item name>"</code></td></tr><tr><td><a href="https://github.com/Slimefun/Slimefun4">SlimeFun (FREE)</a></td><td><code>material: "slimefun:&#x3C;item name>"</code></td></tr><tr><td><a href="https://github.com/xenondevs/Nova">Nova (FREE)</a></td><td><code>material: "nova:&#x3C;item/block name>"</code></td></tr><tr><td>Base64</td><td><code>material: "base64:&#x3C;item in base64>"</code></td></tr><tr><td>PlayerHead</td><td><code>material: "playerHead:&#x3C;player name>"</code> or <code>material: "playerHead:%player%"</code></td></tr><tr><td><a href="https://modrinth.com/plugin/craftengine">CraftEngine</a></td><td><code>material: "craftengine:&#x3C;item id>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/%E2%9A%94%EF%B8%8Fexecutableitems-%E2%AD%90-customize-all-items-add-abilities-%E2%AD%90-ai-items-generation-on-the-discord-%E2%9C%85.83070/">Executable Items</a></td><td><code>material: "ei:&#x3C;item id>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/%E2%AD%90-executable-blocks-%E2%AD%90-add-activators-on-your-blocks.94696/">Executable Blocks</a></td><td><code>material: "eb:&#x3C;block id>"</code></td></tr></tbody></table>
 
 ***
 
@@ -128,8 +111,7 @@ Defines how the lore is used.\
   potion: <potion effect type>
   level: <potion level, 1 or 2> # 1 by default
   splash: <potion splash true or false>
-  extended: <potion extended true or false>
-  arrow: <true or false> # potion will be a Tipped Arrow
+  extended: <potion extended true of flase>
 ```
 
 Allows you to create a potion. Check potion effect types [here](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionType.html) for more details.

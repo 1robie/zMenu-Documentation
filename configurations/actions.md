@@ -239,7 +239,7 @@ If you update the status of a player with orders, to be sure that the inventory 
 
 ***
 
-`refresh inventory`
+## `refresh inventory`
 
 ```yaml
 - type: refresh inventory
