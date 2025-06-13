@@ -128,7 +128,8 @@ Defines how the lore is used.\
   potion: <potion effect type>
   level: <potion level, 1 or 2> # 1 by default
   splash: <potion splash true or false>
-  extended: <potion extended true of flase>
+  extended: <potion extended true or false>
+  arrow: <true or false> # potion will be a Tipped Arrow
 ```
 
 Allows you to create a potion. Check potion effect types [here](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionType.html) for more details.
