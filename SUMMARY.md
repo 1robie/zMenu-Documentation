@@ -24,15 +24,17 @@
 
 ## API
 
-* [ℹ️ Informations](api/informations.md)
-* [Create Button](api/create-button.md)
-* [Create Material Loader](api/create-material-loader.md)
-* [Create ButtonOption](api/create-buttonoption.md)
-* [Load Inventory](api/load-inventory.md)
-* [Fast Events](api/fast-events.md)
+* [ℹ️ Getting Started with zMenu API](api/informations.md)
+* [Creating a Basic Button](api/create-button.md)
+* [Creating a Pagination Button](api/creating-a-pagination-button.md)
+* [Creating a Custom Loader](api/creating-a-custom-loader.md)
+* [Creating a Custom Action](api/creating-a-custom-action.md)
+* [Creating a Custom Material Loader](api/creating-a-custom-material-loader.md)
+* [Creating a Custom Permission System](api/creating-a-custom-permission-system.md)
+* [Creating and Using Inventory Files](api/creating-and-using-inventory-files.md)
 
 ***
 
+* [Plugin Initialization and Registration](plugin-initialization-and-registration.md)
 * [🗃️ Plugin's files](plugins-files.md)
-* [🕍 Example GUI menus](example-gui-menus.md)
 * [Update to new API](update-to-new-api.md)

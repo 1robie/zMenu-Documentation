@@ -1,66 +1,87 @@
----
-description: API Information
----
+# ℹ️ Getting Started with zMenu API
 
-# ℹ️ Informations
+This tutorial will guide you through creating a plugin using the [zMenu API](https://github.com/Maxlego08/zMenu), a powerful system to create advanced and dynamic inventory menus for Minecraft servers.
 
-The zMenu API will allow you to create your own inventory and button. You can have the same configuration system for all your plugins.
+### Requirements
 
-Javadocs: [https://javadocs.groupez.dev/zmenu/index.html](https://javadocs.groupez.dev/zmenu/index.html)
+* Java 21+
+* Spigot or Paper (1.20.4+ recommended)
+* Basic knowledge of plugin development
 
-Example: [https://github.com/Maxlego08/zMenuExample](https://github.com/Maxlego08/zMenuExample)
+### Installation
 
+To use the zMenu API in your plugin, you need to add the repository and dependency to your build system.
 
+#### Maven
 
-Last version here: [https://github.com/Maxlego08/zMenu-API/tags](https://github.com/Maxlego08/zMenu-API/tags)
-
-## Maven
+Add the repository:
 
 ```xml
 <repositories>
-	<repository>
-		<id>jitpack.io</id>
-		<url>https://jitpack.io</url>
-	</repository>
+  <repository>
+    <id>groupez</id>
+    <url>https://repo.groupez.dev/releases</url>
+  </repository>
 </repositories>
+```
 
+Add the dependency:
+
+```xml
 <dependencies>
-	<dependency>
-		<groupId>com.github.Maxlego08</groupId>
-		<artifactId>zMenu-API</artifactId>
-		<version>VERSION</version>
-	</dependency>
+  <dependency>
+    <groupId>fr.maxlego08.menu</groupId>
+    <artifactId>zmenu-api</artifactId>
+    <version>1.1.0.0</version>
+    <scope>provided</scope>
+  </dependency>
 </dependencies>
 ```
 
-## Gradle
+#### Gradle Kotlin DSL
 
-```bash
-allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
+Add the repository:
+
+```kotlin
+repositories {
+    maven {
+        name = "groupez"
+        url = uri("https://repo.groupez.dev/releases")
+    }
 }
+```
 
+Add the dependency:
+
+```kotlin
 dependencies {
-		implementation 'com.github.Maxlego08:zMenu-API:VERSION'
+    compileOnly("fr.maxlego08.menu:zmenu-api:1.1.0.0")
 }
 ```
 
-## First step
+#### Gradle Groovy DSL
 
-The first step is to get the [InventoryManager](https://javadocs.groupez.dev/zmenu/fr/maxlego08/menu/api/InventoryManager.html) and [ButtonManager](https://javadocs.groupez.dev/zmenu/fr/maxlego08/menu/api/ButtonManager.html) interface with the spigot service provider system.
+Add the repository:
 
-```java
-@Override
-public void onEnable() {
-    InventoryManager inventoryManager = getProvider(InventoryManager.class);
-    ButtonManager buttonManager = getProvider(ButtonManager.class);
-}
-
-private <T> T getProvider(Class<T> classz) {
-    RegisteredServiceProvider<T> provider = getServer().getServicesManager().getRegistration(classz);
-    return provider == null ? null : provider.getProvider() != null ? (T) provider.getProvider() : null;
+```groovy
+repositories {
+    maven {
+        name "groupez"
+        url "https://repo.groupez.dev/releases"
+    }
 }
 ```
+
+Add the dependency:
+
+```groovy
+dependencies {
+    compileOnly "fr.maxlego08.menu:zmenu-api:1.1.0.0"
+}
+```
+
+### Snapshots
+
+If you want to test development versions, replace `releases` by `snapshots` in the repository URL:
+
+* `https://repo.groupez.dev/snapshots`
