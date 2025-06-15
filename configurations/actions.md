@@ -101,6 +101,22 @@ This feature is only available with [zMenu+](../zmenu+.md) !
 
 ***
 
+## `player command as op`
+
+```yaml
+- type: player command as op
+  commands:
+    - <command>
+```
+
+Allows the execution of a command while being op.
+
+{% hint style="danger" %}
+Attention, this action will give all the permissions to the player while they execute the command. Please be careful when using this action.
+{% endhint %}
+
+***
+
 ## `message`
 
 ```yaml
