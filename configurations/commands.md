@@ -54,6 +54,7 @@ commands:
     inventory: example_punish
     arguments:
       - name: target
+        type: online-player
       - name: reason
         auto-completion:
           - cheat
@@ -151,6 +152,7 @@ commands:
     inventory: example_punish
     arguments:
       - name: target
+        type: online-player
       - name: reason
         auto-completion:
           - cheat
@@ -163,7 +165,7 @@ commands:
               - "&7You will put a punishment to the player &f&n%target%&r &7with the reason&8: &f%reason%"
 ```
 
-You can define an [action](actions.md) and auto-completion list for each action.
+You can define an [action](actions.md), argument type and `auto-completion` list for each argument.
 
 You can define whether an argument and required or not with the value `isRequired`, I’ll show you that in the example below.
 
@@ -209,3 +211,27 @@ commands:
 ```
 
 This example opens a warp inventory, then with an argument to teleport the player to the desired warp using an aliase of essentials.
+
+#### Argument validator
+
+Allows you to verify that an argument is of the correct type
+
+| Type          | Description                                                           |
+| ------------- | --------------------------------------------------------------------- |
+| boolean       | Checks if the argument is true or false                               |
+| double        | Checks if the argument is a decimal number                            |
+| entity-type   | Checks if the argument is an entity type                              |
+| integer       | Checks if the argument is an number                                   |
+| location      | Checks if the argument is a location (format: \<world>,\<x>,\<y>,\<z> |
+| material      | Checks if the argument is a material                                  |
+| online-player | Checks if the argument is an online player                            |
+| player        | Checks if the argument is a player                                    |
+| world         | Checks if the argument is a world name                                |
+
+In this example, the target argument must be an online player.
+
+```yaml
+arguments:
+  - name: target
+    type: online-player
+```
