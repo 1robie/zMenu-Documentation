@@ -283,3 +283,23 @@ Determines which name is selected if multiple conditions are met. **Higher** val
 [Requirements](requirements.md) that must be met for a specific name to be applied
 
 {% embed url="https://youtu.be/4MZtWmMXn7I" fullWidth="false" %}
+
+***
+
+### `cancel-item-pickup`
+
+```yaml
+cancel-item-pickup: true # Default: false
+```
+
+When set to true, this option prevents players from picking up items on the floor while the inventory is open. This is useful to avoid overlapping the inventory with undesirable items.
+
+***
+
+### `target-player-name-placeholder`
+
+```yaml
+target-player-name-placeholder: "%zmenu_argument_target%" # Default: "%player_name%"
+```
+
+This placeholder is used to parse the inventory items, placeholders and permissions for the target player. By default, it is set to %player_name%, which refers to the player who opened the inventory.

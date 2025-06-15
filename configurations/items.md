@@ -112,6 +112,7 @@ Defines how the lore is used.\
   level: <potion level, 1 or 2> # 1 by default
   splash: <potion splash true or false>
   extended: <potion extended true of flase>
+  arrow: <potion arrow true or false> # false by default, true for arrow with potion effect
 ```
 
 Allows you to create a potion. Check potion effect types [here](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionType.html) for more details.
@@ -526,6 +527,52 @@ Allows to define an armor trim, only usable on armor
 
 {% hint style="danger" %}
 Only available for 1.20 and above
+{% endhint %}
+
+***
+
+## `center-name`
+
+```yaml
+center-name: true #Default: false
+```
+
+If true, the item name will be centered in the item tooltip. If false, the item name will be left-aligned.
+
+***
+
+## `center-lore`
+
+```yaml
+center-lore: true #Default: false
+```
+
+If true, the item lore will be centered in the item tooltip. If false, the item lore will be left-aligned.
+
+***
+
+## `tooltip-style`
+
+```yaml
+tooltip-style: "<namespace>:<tooltip name>" #Example "minecraft:default"
+```
+Allows you to set a custom tooltip style for the item. The tooltip style must be defined in a resource pack and can be used to change the appearance of the tooltip.
+
+{% hint style="danger" %}
+Only available for 1.21 and above
+{% endhint %}
+
+***
+
+## `item-model`
+
+```yaml
+item-model: "<namespace>:<model name>" #Example "minecraft:default"
+```
+Allows you to set a custom item model for the item. The item model must be defined in a resource pack and can be used to change the appearance of the item. Identical to model-id, but for new minecraft versions.
+
+{% hint style="danger" %}
+Only available for 1.21 and above
 {% endhint %}
 
 ***
