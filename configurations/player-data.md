@@ -16,6 +16,6 @@ The permission to use these commands is: `zmenu.players`
 
 ## Placeholders
 
-Placeholders can be used in an inventory for displaying an item or for a permission. You can block access to a button with a placeholder. You can see an example [here](../plugins-files.md).
+Placeholders can be used in an inventory for displaying an item or for a permission. You can block access to a button with a placeholder. You can see an example [here](broken-reference).
 
 <table><thead><tr><th width="426.56591923371104">Placeholder</th><th>Description</th></tr></thead><tbody><tr><td><code>%zmenu_player_value_&#x3C;key>%</code></td><td>Returns the value contained in a key. </td></tr><tr><td><code>%zmenu_player_expire_format_&#x3C;key>%</code></td><td>Returns the expiration time formatted according to a key.</td></tr><tr><td><code>%zmenu_player_expire_&#x3C;key>%</code></td><td>Returns the expiration time according to a key.</td></tr><tr><td><code>%zmenu_player_key_exist_&#x3C;key>%</code></td><td>Returns true or false. Allows to know if a key exists.</td></tr></tbody></table>

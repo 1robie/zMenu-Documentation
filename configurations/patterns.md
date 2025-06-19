@@ -22,7 +22,7 @@ For instance, if you have a pattern for a pagination button or a decorative bord
 
 By leveraging patterns, you can effectively manage and customize the appearance of your inventories without redundant configuration efforts.
 
-[Example](../plugins-files.md#pattern1):
+[Example](broken-reference):
 
 ```yaml
 name: "pattern1"

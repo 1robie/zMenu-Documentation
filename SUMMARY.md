@@ -36,5 +36,7 @@
 ***
 
 * [Plugin Initialization and Registration](plugin-initialization-and-registration.md)
-* [🗃️ Plugin's files](plugins-files.md)
+* [Using Actions Outside of a Button](using-actions-outside-of-a-button.md)
+* [Creating a Custom CommandArgumentValidator](creating-a-custom-commandargumentvalidator.md)
+* [Using MenuItemStack](using-menuitemstack.md)
 * [Update to new API](update-to-new-api.md)

@@ -2,6 +2,8 @@
 
 This tutorial will guide you through creating a plugin using the [zMenu API](https://github.com/Maxlego08/zMenu), a powerful system to create advanced and dynamic inventory menus for Minecraft servers.
 
+JavaDocs: [https://repo.groupez.dev/javadoc/releases/fr/maxlego08/menu/zmenu-api/1.1.0.0](https://repo.groupez.dev/javadoc/releases/fr/maxlego08/menu/zmenu-api/1.1.0.0)
+
 ### Requirements
 
 * Java 21+
