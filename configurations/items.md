@@ -556,6 +556,7 @@ If true, the item lore will be centered in the item tooltip. If false, the item 
 ```yaml
 tooltip-style: "<namespace>:<tooltip name>" #Example "minecraft:default"
 ```
+
 Allows you to set a custom tooltip style for the item. The tooltip style must be defined in a resource pack and can be used to change the appearance of the tooltip.
 
 {% hint style="danger" %}
@@ -569,7 +570,22 @@ Only available for 1.21 and above
 ```yaml
 item-model: "<namespace>:<model name>" #Example "minecraft:default"
 ```
+
 Allows you to set a custom item model for the item. The item model must be defined in a resource pack and can be used to change the appearance of the item. Identical to model-id, but for new minecraft versions.
+
+{% hint style="danger" %}
+Only available for 1.21 and above
+{% endhint %}
+
+***
+
+## `equipped-model`
+
+```
+equipped-model: "<namespace>:<model id>"
+```
+
+Allows you to define the **asset\_id** of your item
 
 {% hint style="danger" %}
 Only available for 1.21 and above
