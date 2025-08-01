@@ -451,3 +451,14 @@ Allow to send a discord webhook. You can add a embeds, username, tts etc.
 ```
 
 Send a [webhook discord components](https://discord.com/developers/docs/components/reference). To generate your component you must go to the site [https://discord.builders/](https://discord.builders/), then you must copy the result json. You can simplify your json into one line [here](https://jsonformatter.org/json-minify).
+
+## `permission set`
+
+<pre class="language-yaml"><code class="lang-yaml">- type: permission set
+<strong>  permission: &#x3C;permission>
+</strong>  value: &#x3C;true/false>
+</code></pre>
+
+Allows you to add or remove a permission from a player, works with luckperms.
+
+***
