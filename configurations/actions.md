@@ -37,7 +37,9 @@ success:
 
 ***
 
-## `player command`
+## zMenu
+
+### `player command`
 
 ```yaml
 - type: player command
@@ -51,7 +53,7 @@ Executes commands as the player. You can also send the command in the player's c
 
 ***
 
-## `random player command`
+### `random player command`
 
 ```yaml
 - type: random_player_command
@@ -70,7 +72,7 @@ This feature is only available with [zMenu+](../zmenu+.md) !
 
 ***
 
-## `console command`
+### `console command`
 
 ```yaml
 - type: console_command
@@ -83,7 +85,7 @@ Executes commands as the console.
 
 ***
 
-## `random console command`
+### `random console command`
 
 ```yaml
 - type: random_console_command
@@ -101,7 +103,7 @@ This feature is only available with [zMenu+](../zmenu+.md) !
 
 ***
 
-## `player command as op`
+### `player command as op`
 
 ```yaml
 - type: player command as op
@@ -117,7 +119,7 @@ Attention, this action will give all the permissions to the player while they ex
 
 ***
 
-## `message`
+### `message`
 
 ```yaml
 - type: message
@@ -131,7 +133,7 @@ Sends a message to the player. You can use placeholders, color codes, and format
 
 ***
 
-## `broadcast`
+### `broadcast`
 
 ```yaml
 - type: broadcast
@@ -153,7 +155,7 @@ You can set a list of [requirements](requirements.md) to send a message to certa
 
 ***
 
-## `chat`
+### `chat`
 
 ```yaml
 - type: chat
@@ -165,7 +167,7 @@ Sends messages on behalf of the player. You can use placeholders, color codes, a
 
 ***
 
-## `close`
+### `close`
 
 ```yaml
 - type: close
@@ -175,7 +177,7 @@ Closes the player's inventory.
 
 ***
 
-## `inventory`
+### `inventory`
 
 ```yaml
 - type: inventory
@@ -187,7 +189,7 @@ Closes the player's inventory.
 
 Opens an inventory.
 
-## `connect`
+### `connect`
 
 ```yaml
 - type: connect
@@ -198,7 +200,7 @@ Allows sending the player to another server, only works with BungeeCord and Velo
 
 ***
 
-## `sound`
+### `sound`
 
 ```yaml
 - type: sound
@@ -211,7 +213,7 @@ Send a sound to a player, you must use [XSound](https://github.com/CryptoMorin/X
 
 ***
 
-## `broadcast sound`
+### `broadcast sound`
 
 ```yaml
 - type: broadcast_sound
@@ -224,7 +226,7 @@ Send a sound to the online players, you must use [XSound](https://github.com/Cry
 
 ***
 
-## `data`
+### `data`
 
 ```yaml
 - type: data
@@ -241,7 +243,7 @@ You can use mathematical expressions if you set math to true, this allows you to
 
 ***
 
-## `refresh`
+### `refresh`
 
 ```yaml
 - type: refresh  
@@ -255,7 +257,7 @@ If you update the status of a player with orders, to be sure that the inventory 
 
 ***
 
-## `refresh inventory`
+### `refresh inventory`
 
 ```yaml
 - type: refresh inventory
@@ -265,7 +267,7 @@ Refreshes the currently open inventory.
 
 ***
 
-## `back`
+### `back`
 
 ```yaml
 - type: back
@@ -275,7 +277,7 @@ Return to previous inventory.
 
 ***
 
-## `shopkeeper`
+### `shopkeeper`
 
 ```yaml
 - type: shopkeeper
@@ -286,7 +288,7 @@ Open a [Shopkeeper](https://www.spigotmc.org/threads/shopkeepers.447969/) tradin
 
 ***
 
-## `book`
+### `book`
 
 ```yaml
 - type: book
@@ -304,7 +306,7 @@ Opens a book for the player. You can specify the title, author, and pages of the
 
 ***
 
-## `actionbar`
+### `actionbar`
 
 ```yaml
 - type: actionbar
@@ -316,7 +318,7 @@ Allows you to send a message in the action bar of the player. You can use placeh
 
 ***
 
-## `withdraw`
+### `withdraw`
 
 ```yaml
 - type: withdraw
@@ -330,7 +332,7 @@ CurrenciesAPI : [https://github.com/Traqueur-dev/CurrenciesAPI](https://github.c
 
 ***
 
-## `deposit`
+### `deposit`
 
 ```yaml
 - type: deposit
@@ -344,7 +346,7 @@ CurrenciesAPI : [https://github.com/Traqueur-dev/CurrenciesAPI](https://github.c
 
 ***
 
-## `title`
+### `title`
 
 ```yaml
 - type: title
@@ -359,7 +361,7 @@ Send a title. You can use placeholders and color/format codes here. **MiniMessag
 
 ***
 
-## `teleport`
+### `teleport`
 
 ```yaml
 - type: teleport
@@ -375,7 +377,7 @@ Teleport a player
 
 ***
 
-## `discord`
+### `discord`
 
 ```yaml
 - type: discord
@@ -415,7 +417,7 @@ Allow to send a discord webhook. You can add a embeds, username, tts etc.
 
 ***
 
-## `discord component`
+### `discord component`
 
 ```yaml
 - type: discord component
@@ -452,7 +454,7 @@ Allow to send a discord webhook. You can add a embeds, username, tts etc.
 
 Send a [webhook discord components](https://discord.com/developers/docs/components/reference). To generate your component you must go to the site [https://discord.builders/](https://discord.builders/), then you must copy the result json. You can simplify your json into one line [here](https://jsonformatter.org/json-minify).
 
-## `permission set`
+### `permission set`
 
 <pre class="language-yaml"><code class="lang-yaml">- type: permission set
 <strong>  permission: &#x3C;permission>
@@ -460,5 +462,58 @@ Send a [webhook discord components](https://discord.com/developers/docs/componen
 </code></pre>
 
 Allows you to add or remove a permission from a player, works with luckperms.
+
+***
+
+## zQuests
+
+Lists of actions working with the [zQuests](https://groupez.dev/resources/zquests.335) plugin.
+
+### `start quest`
+
+```yaml
+- type: start quest
+  quests:
+    - <quest name>
+```
+
+Allows you to start several quests.
+
+***
+
+## zJobs
+
+Lists of actions working with the [zJobs](https://groupez.dev/resources/zjobs.336) plugin.
+
+### `zjobs add points`
+
+```yaml
+- type: zjobs add points
+  points: <points>
+```
+
+Allows you to add job points
+
+***
+
+### `zjobs claim reward`
+
+```yaml
+- type: zjobs claim reward
+  reward: <reward id>
+```
+
+Allows you to claim a reward
+
+***
+
+### `zjobs remove points`
+
+```yaml
+- type: zjobs remove points
+  points: <points>
+```
+
+Allows you to remove job points
 
 ***
