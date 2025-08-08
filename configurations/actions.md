@@ -465,6 +465,21 @@ Allows you to add or remove a permission from a player, works with luckperms.
 
 ***
 
+### `toast`
+
+```yaml
+- type: toast
+  toast-type: <TASK/GOAL/CHALLENGE>
+  message: <your message>
+  material: <material>
+  model-id: <material model id> # Default is 0
+  glowing: <true/false>
+```
+
+Allows you to send a toast message to the player. You can use a material from another plugin to define the material and model id to use.
+
+***
+
 ## zQuests
 
 Lists of actions working with the [zQuests](https://groupez.dev/resources/zquests.335) plugin.
