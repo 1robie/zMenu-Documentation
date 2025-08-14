@@ -273,6 +273,18 @@ CurrenciesAPI : [https://github.com/Traqueur-dev/CurrenciesAPI](https://github.c
 
 ***
 
+### `cuboid`
+
+```yaml
+- type: cuboid
+  cuboids:
+    - "<world name>,<x1>,<y1>,<z1>,<x2>,<y2>,<z2>"
+```
+
+Allows you to check if the player is present in a cuboid. You must define the world as well as the coordinates of the two ends of your cuboid.
+
+***
+
 ### `and`
 
 Allows to combine multiple requirements into one.
