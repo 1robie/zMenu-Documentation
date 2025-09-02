@@ -93,6 +93,44 @@ items:
 
 The pattern can be used endlessly in inventory. This allows to create very optimized configs without having to repeat the same thing several times. Only the important items will be in your inventory file.
 
+---
+
+### Using `view-requirement` and `else` with patterns
+
+You can add a `view-requirement` when calling a pattern to control its visibility, just like for items or buttons. If the requirement is not met, you can use an `else` block to display another pattern or a custom item/button instead.
+
+```yaml
+items:
+  example1:
+    pattern:
+      fileName: "<your file name>"
+      slot: 10
+      name: 'Example 1'
+    view-requirement:
+      requirements:
+        - type: permission
+          permission: "example.permission"
+      deny:
+        - type: message
+          messages:
+            - "&cYou don't have permission!"
+    else:
+      pattern:
+        fileName: "<other pattern file>"
+        slot: 10
+        name: 'Fallback Example'
+      # Or you can define a custom item/button here
+      # item:
+      #   material: BARRIER
+      #   name: "&cAccess Denied"
+```
+
+This allows you to dynamically control which pattern or item is shown based on requirements, making your inventories even more flexible and powerful.
+
+{% hint style="info" %}
+The `else` block can contain another pattern or a custom item/button configuration.
+{% endhint %}
+
 ### Example
 
 This example provient de la resource [Vote Menu](https://builtbybit.com/resources/vote-menu-zmenu-configurations.41468/).
