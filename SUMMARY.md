@@ -25,18 +25,21 @@
 ## API
 
 * [ℹ️ Getting Started with zMenu API](api/informations.md)
+* [Plugin Initialization and Registration](api/plugin-initialization-and-registration.md)
 * [Creating a Basic Button](api/create-button.md)
 * [Creating a Pagination Button](api/creating-a-pagination-button.md)
-* [Creating a Custom Loader](api/creating-a-custom-loader.md)
-* [Creating a Custom Action](api/creating-a-custom-action.md)
-* [Creating a Custom Material Loader](api/creating-a-custom-material-loader.md)
-* [Creating a Custom Permission System](api/creating-a-custom-permission-system.md)
 * [Creating and Using Inventory Files](api/creating-and-using-inventory-files.md)
+* [Using MenuItemStack](api/using-menuitemstack.md)
+* [Using Actions Outside of a Button](api/using-actions-outside-of-a-button.md)
+
+### Custom Extensions
+
+* [Creating a Custom Loader](api/custom/creating-a-custom-loader.md)
+* [Creating a Custom Action](api/custom/creating-a-custom-action.md)
+* [Creating a Custom Material Loader](api/custom/creating-a-custom-material-loader.md)
+* [Creating a Custom Permission System](api/custom/creating-a-custom-permission-system.md)
+* [Creating a Custom CommandArgumentValidator](api/custom/creating-a-custom-commandargumentvalidator.md)
 
 ***
 
-* [Plugin Initialization and Registration](api/plugin-initialization-and-registration.md)
-* [Using Actions Outside of a Button](api/using-actions-outside-of-a-button.md)
-* [Creating a Custom CommandArgumentValidator](api/creating-a-custom-commandargumentvalidator.md)
-* [Using MenuItemStack](api/using-menuitemstack.md)
 * [Update to new API](api/update-to-new-api.md)

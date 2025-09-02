@@ -613,3 +613,15 @@ Only available for 1.21 and above
 {% endhint %}
 
 ***
+
+## `player-inventory`
+
+```yaml
+player-inventory: true
+```
+
+If set to `true`, the item was placing in the player inventory slot.
+
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}
