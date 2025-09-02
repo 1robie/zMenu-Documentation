@@ -22,6 +22,17 @@
 * [🛝 Player data](configurations/player-data.md)
 * [🦬 Config.json](configurations/config.json.md)
 
+## 🗨️ Dialogs
+
+* [ℹ️ Introduction to Dialogs](dialogs/introduction.md)
+    * [Creating a Simple Dialog](dialogs/creating-a-simple-dialog.md)
+    * [Dialog Types](dialogs/dialog-types.md)
+    * [Dialog Configuration Options](dialogs/dialog-configuration-options.md)
+    * [Dialog Body Elements](dialogs/dialog-body-elements.md)
+    * [Dialog Inputs](dialogs/dialog-inputs.md)
+    * [Dialog Actions](dialogs/dialog-actions.md)
+    * [Examples](dialogs/examples.md)
+
 ## API
 
 * [ℹ️ Getting Started with zMenu API](api/informations.md)
