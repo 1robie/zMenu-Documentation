@@ -28,6 +28,7 @@ commands:
   advanced_command:
     command: advanced_command
     permission: "admin.use"
+    deny-message: "§cYou don't have permission to use this command."
     aliases:
       - zai
     inventory: advanced_inventory
@@ -139,6 +140,14 @@ arguments:
 ```
 
 Allows you to add arguments to your commands. You can use the arguments with the following placeholder: `%zmenu_argument_<argument name>%`&#x20;
+
+### `deny-message`
+
+```yaml
+deny-message: "<message>"
+```
+
+Message sent to the player if he does not have permission to execute the command.
 
 #### Example
 

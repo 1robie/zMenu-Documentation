@@ -35,8 +35,8 @@
 
 ***
 
-* [Plugin Initialization and Registration](plugin-initialization-and-registration.md)
-* [Using Actions Outside of a Button](using-actions-outside-of-a-button.md)
-* [Creating a Custom CommandArgumentValidator](creating-a-custom-commandargumentvalidator.md)
-* [Using MenuItemStack](using-menuitemstack.md)
-* [Update to new API](update-to-new-api.md)
+* [Plugin Initialization and Registration](api/plugin-initialization-and-registration.md)
+* [Using Actions Outside of a Button](api/using-actions-outside-of-a-button.md)
+* [Creating a Custom CommandArgumentValidator](api/creating-a-custom-commandargumentvalidator.md)
+* [Using MenuItemStack](api/using-menuitemstack.md)
+* [Update to new API](api/update-to-new-api.md)
