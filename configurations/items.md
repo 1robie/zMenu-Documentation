@@ -8,7 +8,28 @@ Before you start configuring the plugin itemstack, make sure you are using the c
 material: <material>
 ```
 
-<table data-full-width="true"><thead><tr><th>Type</th><th>Format / Example</th></tr></thead><tbody><tr><td>Material (Bukkit)</td><td><code>material: STONE</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a></td><td><code>material: %your_placeholder_material%</code></td></tr><tr><td>Armor (slot)</td><td><code>material: "armor:&#x3C;slot>"</code> (e.g. HEAD, CHEST, LEGS, FEET)</td></tr><tr><td><a href="https://www.spigotmc.org/resources/zhead-database.115717/">zHead (FREE)</a></td><td><code>material: "zhd:&#x3C;id>"</code></td></tr><tr><td><a href="https://polymart.org/resource/magic-cosmetics-20-off.2070">MagicCosmetics (PAID)</a></td><td><code>material: "magic_cosmetics:&#x3C;HAT/BAG/WALKING_STICK/BALLOON/SPRAY>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/hmccosmetics.100107/">Hmccosmetics (PAID)</a></td><td><code>material: "hmc_cosmetics:&#x3C;type>"</code> or <code>material: "hmc_cosmetics:&#x3C;type>-&#x3C;player name>"</code></td></tr><tr><td>zItems (PAID)</td><td><code>material: "zitems:&#x3C;id>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/head-database.14280/">HeadDatabase (PAID)</a></td><td><code>material: "hdb:&#x3C;id>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/%E2%98%84%EF%B8%8F-oraxen-add-items-blocks-armors-hats-food-furnitures-plants-and-gui-1-18-1-20-1.72448/">Oraxen (PAID)</a></td><td><code>material: "oraxen:&#x3C;item name>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/%E2%9C%A8itemsadder%E2%AD%90emotes-mobs-items-armors-hud-gui-emojis-blocks-wings-hats-liquids.73355/">ItemsAdder (PAID)</a></td><td><code>material: "itemsadder:&#x3C;item name>"</code></td></tr><tr><td><a href="https://github.com/Slimefun/Slimefun4">SlimeFun (FREE)</a></td><td><code>material: "slimefun:&#x3C;item name>"</code></td></tr><tr><td><a href="https://github.com/xenondevs/Nova">Nova (FREE)</a></td><td><code>material: "nova:&#x3C;item/block name>"</code></td></tr><tr><td>Base64</td><td><code>material: "base64:&#x3C;item in base64>"</code></td></tr><tr><td>PlayerHead</td><td><code>material: "playerHead:&#x3C;player name>"</code> or <code>material: "playerHead:%player%"</code></td></tr><tr><td><a href="https://modrinth.com/plugin/craftengine">CraftEngine</a></td><td><code>material: "craftengine:&#x3C;item id>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/%E2%9A%94%EF%B8%8Fexecutableitems-%E2%AD%90-customize-all-items-add-abilities-%E2%AD%90-ai-items-generation-on-the-discord-%E2%9C%85.83070/">Executable Items</a></td><td><code>material: "ei:&#x3C;item id>"</code></td></tr><tr><td><a href="https://www.spigotmc.org/resources/%E2%AD%90-executable-blocks-%E2%AD%90-add-activators-on-your-blocks.94696/">Executable Blocks</a></td><td><code>material: "eb:&#x3C;block id>"</code></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr>
+<th>Type</th><th>Format / Example</th></tr></thead><tbody><tr>
+<td>Material (Bukkit)</td><td><code>material: STONE</code></td></tr><tr>
+<td><a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a></td><td><code>material: %your_placeholder_material%</code></td></tr><tr>
+<td>Armor (slot)</td><td><code>material: "armor:&#x3C;slot>"</code> (e.g. HEAD, CHEST, LEGS, FEET)</td></tr><tr>
+<td><a href="https://www.spigotmc.org/resources/zhead-database.115717/">zHead (FREE)</a></td><td><code>material: "zhd:&#x3C;id>"</code></td></tr><tr>
+<td><a href="https://polymart.org/resource/magic-cosmetics-20-off.2070">MagicCosmetics (PAID)</a></td><td><code>material: "magic_cosmetics:&#x3C;HAT/BAG/WALKING_STICK/BALLOON/SPRAY>"</code></td></tr><tr>
+<td><a href="https://www.spigotmc.org/resources/hmccosmetics.100107/">Hmccosmetics (PAID)</a></td><td><code>material: "hmc_cosmetics:&#x3C;type>"</code> or <code>material: "hmc_cosmetics:&#x3C;type>-&#x3C;player name>"</code></td></tr><tr>
+<td>zItems (PAID)</td><td><code>material: "zitems:&#x3C;id>"</code></td></tr><tr>
+<td><a href="https://www.spigotmc.org/resources/head-database.14280/">HeadDatabase (PAID)</a></td><td><code>material: "hdb:&#x3C;id>"</code></td></tr><tr>
+<td><a href="https://www.spigotmc.org/resources/%E2%98%84%EF%B8%8F-oraxen-add-items-blocks-armors-hats-food-furnitures-plants-and-gui-1-18-1-20-1.72448/">Oraxen (PAID)</a></td><td><code>material: "oraxen:&#x3C;item name>"</code></td></tr><tr>
+<td><a href="https://www.spigotmc.org/resources/%E2%9C%A8itemsadder%E2%AD%90emotes-mobs-items-armors-hud-gui-emojis-blocks-wings-hats-liquids.73355/">ItemsAdder (PAID)</a></td><td><code>material: "itemsadder:&#x3C;item name>"</code></td></tr><tr>
+<td><a href="https://github.com/Slimefun/Slimefun4">SlimeFun (FREE)</a></td><td><code>material: "slimefun:&#x3C;item name>"</code></td></tr><tr>
+<td><a href="https://github.com/xenondevs/Nova">Nova (FREE)</a></td><td><code>material: "nova:&#x3C;item/block name>"</code></td></tr><tr>
+<td>Base64</td><td><code>material: "base64:&#x3C;item in base64>"</code></td></tr><tr>
+<td>PlayerHead</td><td><code>material: "playerHead:&#x3C;player name>"</code> or <code>material: "playerHead:%player%"</code></td></tr><tr>
+<td><a href="https://modrinth.com/plugin/craftengine">CraftEngine</a></td><td><code>material: "craftengine:&#x3C;item id>"</code></td></tr><tr>
+<td><a href="https://www.spigotmc.org/resources/%E2%9A%94%EF%B8%8Fexecutableitems-%E2%AD%90-customize-all-items-add-abilities-%E2%AD%90-ai-items-generation-on-the-discord-%E2%9C%85.83070/">Executable Items</a></td><td><code>material: "ei:&#x3C;item id>"</code></td></tr><tr>
+<td><a href="https://www.spigotmc.org/resources/%E2%AD%90-executable-blocks-%E2%AD%90-add-activators-on-your-blocks.94696/">Executable Blocks</a></td><td><code>material: "eb:&#x3C;block id>"</code></td></tr><tr>
+<td><a href="https://mcmodels.net/products/13172/nexo?srsltid=AfmBOoqpsyBpLi6QxRwd1dO8lJ6s-wy4KzFhpYdvVgf6c5Q8Wk1-C_bT">Nexo</a></td><td><code>material: "nexo:&lt;item id&gt;"</code></td></tr>
+
+</tbody></table>
 
 ***
 
@@ -592,3 +613,15 @@ Only available for 1.21 and above
 {% endhint %}
 
 ***
+
+## `player-inventory`
+
+```yaml
+player-inventory: true
+```
+
+If set to `true`, the item was placing in the player inventory slot.
+
+{% hint style="warning" %}
+This feature is only available with [zMenu+](../zmenu+.md) !
+{% endhint %}

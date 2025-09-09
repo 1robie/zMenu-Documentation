@@ -9,6 +9,8 @@ icon: hexagon-check
 
 We will create a button that sends a message to the player when clicked. The button is registered with the name `BASIC_EXAMPLE`.
 
+> **Note:** To use your button in inventories, you also need a loader. See [Creating a Custom Loader](custom/creating-a-custom-loader.md) for details on loader creation and advanced configuration.
+
 ### Step 1: Create the Button Class
 
 Create a class `BasicButton` that extends `Button`:
@@ -42,31 +44,11 @@ public class BasicButton extends Button {
 }
 ```
 
-### Step 2: Create a Loader
+### Step 2: Create a Loader (Overview)
 
-A loader allows zMenu to instantiate your button from a configuration file.
+A loader allows zMenu to instantiate your button from a configuration file. It bridges your button logic with YAML configuration, enabling dynamic button creation.
 
-```java
-import fr.maxlego08.example.buttons.BasicButton;
-import fr.maxlego08.menu.api.button.Button;
-import fr.maxlego08.menu.api.button.DefaultButtonValue;
-import fr.maxlego08.menu.api.loader.ButtonLoader;
-import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.Plugin;
-
-public class BasicLoader extends ButtonLoader {
-
-    public BasicLoader(Plugin plugin) {
-        super(plugin, "BASIC_EXAMPLE");
-    }
-
-    @Override
-    public Button load(YamlConfiguration configuration, String path, DefaultButtonValue defaultButtonValue) {
-        String key = configuration.getString(path + "key-example", "default key");
-        return new BasicButton(key);
-    }
-}
-```
+> For a full implementation, advanced usage, and parameter extraction, see [Creating a Custom Loader](custom/creating-a-custom-loader.md).
 
 ### Step 3: Register the Loader
 
@@ -97,3 +79,8 @@ When a player clicks the button, they will receive a message like:
 ```
 Hey, it's nice to meet you! Button key: basic
 ```
+
+---
+
+## See Also
+- [Creating a Custom Loader](custom/creating-a-custom-loader.md): Learn how to map configuration to your button logic and handle advanced loading scenarios.

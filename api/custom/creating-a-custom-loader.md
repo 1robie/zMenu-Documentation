@@ -11,9 +11,15 @@ icon: octagon-check
 
 We will explain how a custom `ButtonLoader` works by revisiting the `BasicLoader` class used for the `BasicButton`.
 
+> **Note:** This section assumes you already have a custom button class. If not, see [Creating a Basic Button](../create-button.md) for instructions on button creation.
+
 ### What Is a Loader?
 
 A loader allows zMenu to load buttons from YAML configuration files dynamically. It maps a custom `type:` to the logic that instantiates the corresponding button.
+
+**Comparison:**
+- **Button:** Contains the logic and behavior for your custom button.
+- **Loader:** Bridges configuration (YAML) to your button by instantiating it with parameters from the config.
 
 ### Step 1: Extend `ButtonLoader`
 
@@ -41,11 +47,11 @@ public class BasicLoader extends ButtonLoader {
 }
 ```
 
-### Constructor Explained
+#### Constructor Explained
 
 * `super(plugin, "BASIC_EXAMPLE")`: This tells zMenu that this loader is responsible for buttons of type `BASIC_EXAMPLE` in your inventories.
 
-### Loading Parameters from YAML
+#### Loading Parameters from YAML
 
 This example reads a string from the config using:
 
@@ -53,7 +59,7 @@ This example reads a string from the config using:
 String key = configuration.getString(path + "key-example", "default key");
 ```
 
-You can extract any number of parameters and pass them to your button constructor.
+You can extract any number of parameters and pass them to your button constructor. For advanced scenarios, you can validate, transform, or handle missing values here.
 
 ### Step 2: Register the Loader
 
@@ -64,3 +70,8 @@ buttonManager.register(new BasicLoader(this));
 ```
 
 Once registered, any button with `type: BASIC_EXAMPLE` will be loaded using your custom logic.
+
+---
+
+## See Also
+- [Creating a Basic Button](../create-button.md): Learn how to implement the button logic and behavior.
